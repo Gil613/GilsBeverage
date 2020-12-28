@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                                     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ProductDAO">
+<insert id="pinsert">
+	insert into product(idx, filename, ptype, pname, pcontent,  capacity, cost)
+	values(seq_idx.nextval, #{filename},#{ptype},#{pname},#{pcontent},#{capacity},#{cost})	
+</insert>
+
+<select id="whisky" resultType="product">
+	select idx,filename,pname,capacity,cost 
+	from product where ptype='위스키'
+</select>
+
+<select id="vodka" resultType="product">
+	select idx,filename,pname,capacity,cost 
+	from product where ptype='보드카'
+</select>
+
+<select id="tequila" resultType="product">
+	select idx,filename,pname,capacity,cost 
+	from product where ptype='데킬라'
+</select>
+
+<select id="brandy" resultType="product">
+	select idx,filename,pname,capacity,cost 
+	from product where ptype='브랜디'
+</select>
+
+<select id="gin" resultType="product">
+	select idx,filename,pname,capacity,cost 
+	from product where ptype='진'
+</select>
+
+<select id="lw" resultType="product">
+	select idx,filename,pname,capacity,cost 
+	from product where ptype='기타주류'
+</select>
+
+<select id="selectOne" resultType="product">
+	select * from product where idx=#{idx}
+</select>
+
+<select id="selectForUpdate" resultType="product">
+select filename from product where idx=#{idx}
+</select>
+
+<update id="update">
+	update product set filename=#{filename}, ptype=#{ptype}, 
+	pname=#{pname}, pcontent=#{pcontent},capacity=#{capacity}, cost=#{cost}
+	where idx=#{idx}
+</update>
+
+<delete id="delete">
+	delete product where idx=#{idx}
+</delete>
+
+
+</mapper>

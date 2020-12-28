@@ -1,0 +1,7 @@
+package com.gil.shop.user.service;
+
+import com.gil.shop.user.vo.UserVO;
+
+public interface UserService {
+	void insertUser(UserVO vo);
+}
