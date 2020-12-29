@@ -1,14 +1,14 @@
 # GilsBeverage
 
 ~~~sql
-create table product(
-filename varchar2(50),
-pname nvarchar2(50),
-pcontent nvarchar2(100),
-ptype navarchar2(10),
-capacity varchar2(10),
-cost number
-)
+CREATE TABLE PRODUCT(
+    FILENAME VARCHAR2(50),
+    PNAME NVARCHAR2(50),
+    PCONTENT NVARCHAR2(100),
+    PTYPE NAVARCHAR2(10),
+    CAPACITY VARCHAR2(10),
+    COST NUMBER
+);
 
 CREATE TABLE GIL_USERTBL(
     ID NVARCHAR2(20) NOT NULL PRIMARY KEY,
