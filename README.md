@@ -1,5 +1,6 @@
 # GilsBeverage
 
+~~~sql
 create table product(
 filename varchar2(50),
 pname nvarchar2(50),
@@ -22,3 +23,4 @@ ph2 number not null,
 ph3 number not null,
 email nvarchar2(50) not null
 );
+~~~
