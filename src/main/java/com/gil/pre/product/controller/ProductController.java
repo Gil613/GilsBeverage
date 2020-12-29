@@ -159,7 +159,7 @@ public class ProductController {
 	@RequestMapping(value="/content.do")
 	public String selectOne(ProductVO vo, Model model) {
 		model.addAttribute("p", s.selectOne(vo));
-		return "content.jsp";
+		return "product_content.jsp";
 	}
 	
 	@RequestMapping(value="/modify.do")
