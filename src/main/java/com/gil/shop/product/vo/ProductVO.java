@@ -10,20 +10,18 @@ public class ProductVO {
 	private String pcontent;
 	private String ptype;
 	private String capacity;
-	private int cost;
-	
-	
-	public int getIdx() {
-		return idx;
-	}
-	public void setIdx(int idx) {
-		this.idx = idx;
-	}
+	private String cost;
 	public MultipartFile getUploadFile() {
 		return uploadFile;
 	}
 	public void setUploadFile(MultipartFile uploadFile) {
 		this.uploadFile = uploadFile;
+	}
+	public int getIdx() {
+		return idx;
+	}
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
 	public String getFilename() {
 		return filename;
@@ -55,10 +53,10 @@ public class ProductVO {
 	public void setCapacity(String capacity) {
 		this.capacity = capacity;
 	}
-	public int getCost() {
+	public String getCost() {
 		return cost;
 	}
-	public void setCost(int cost) {
+	public void setCost(String cost) {
 		this.cost = cost;
 	}
 	@Override
@@ -68,4 +66,4 @@ public class ProductVO {
 	}
 	
 	
-}
+	}

@@ -7,5 +7,5 @@
 칵테일 &emsp;&emsp;
 커뮤니티&emsp;&emsp;
 로그인&emsp;&emsp;
-<a href="register.jsp">등록</a>
+<a href="product_register.jsp">등록</a>
 </div>

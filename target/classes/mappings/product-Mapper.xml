@@ -3,57 +3,90 @@
                                      "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="ProductDAO">
+<!-- 상품 등록 -->
 <insert id="pinsert">
-	insert into product(idx, filename, ptype, pname, pcontent,  capacity, cost)
+<![CDATA[
+	insert into gil_product(idx, filename, ptype, pname, pcontent,  capacity, cost)
 	values(seq_idx.nextval, #{filename},#{ptype},#{pname},#{pcontent},#{capacity},#{cost})	
+	]]>
 </insert>
 
+<!-- 위스키  리스트보기 -->
 <select id="whisky" resultType="product">
+<![CDATA[
 	select idx,filename,pname,capacity,cost 
-	from product where ptype='위스키'
+	from gil_product where ptype='위스키'
+	]]>
 </select>
 
+<!-- 보드카  리스트보기 -->
 <select id="vodka" resultType="product">
+	<![CDATA[
 	select idx,filename,pname,capacity,cost 
-	from product where ptype='보드카'
+	from gil_product where ptype='보드카'
+	]]>
 </select>
 
+<!-- 데킬라  리스트보기 -->
 <select id="tequila" resultType="product">
+	<![CDATA[
 	select idx,filename,pname,capacity,cost 
-	from product where ptype='데킬라'
+	from gil_product where ptype='데킬라'
+	]]>
 </select>
 
+<!-- 브랜디  리스트보기 -->
 <select id="brandy" resultType="product">
+	<![CDATA[
 	select idx,filename,pname,capacity,cost 
-	from product where ptype='브랜디'
+	from gil_product where ptype='브랜디'
+	]]>
 </select>
 
+<!-- 진  리스트보기 -->
 <select id="gin" resultType="product">
+	<![CDATA[
 	select idx,filename,pname,capacity,cost 
-	from product where ptype='진'
+	from gil_product where ptype='진'
+	]]>
 </select>
 
+<!-- 리큐르,와인  리스트보기 -->
 <select id="lw" resultType="product">
+	<![CDATA[
 	select idx,filename,pname,capacity,cost 
-	from product where ptype='기타주류'
+	from gil_product where ptype='기타주류'
+	]]>
 </select>
 
+<!-- 상품보기 -->
 <select id="selectOne" resultType="product">
-	select * from product where idx=#{idx}
+	<![CDATA[
+	select * from gil_product where idx=#{idx}
+	]]>
 </select>
 
+<!-- 상품 내용 수정 페이지 -->
 <select id="selectForUpdate" resultType="product">
-select filename from product where idx=#{idx}
+<![CDATA[
+select filename from gil_product where idx=#{idx}
+]]>
 </select>
 
+<!-- 상품 수정하기 -->
 <update id="update">
-	update product set filename=#{filename}, ptype=#{ptype}, 
+	<![CDATA[
+	update gil_product set filename=#{filename}, ptype=#{ptype}, 
 	pname=#{pname}, pcontent=#{pcontent},capacity=#{capacity}, cost=#{cost}
 	where idx=#{idx}
+	]]>
 </update>
 
+<!-- 상품 삭제하기 -->
 <delete id="delete">
-	delete product where idx=#{idx}
+	<![CDATA[
+	delete gil_product where idx=#{idx}
+	]]>
 </delete>
 
 
