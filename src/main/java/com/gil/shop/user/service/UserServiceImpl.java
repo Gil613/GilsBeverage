@@ -11,7 +11,7 @@ public class UserServiceImpl implements UserService{
 
 	@Autowired
 	private UserDao dao;
-	
+	//회원가입
 	@Override
 	public void insertUser(UserVO vo) {
 		dao.insertUser(vo);
