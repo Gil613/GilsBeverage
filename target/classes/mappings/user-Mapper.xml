@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="UserDAO">
-<insert id="insertUser">
-	 <![CDATA[
-       insert  into usertbl ( id, pwd, name, nickname, birthy, birthm, birthd, ph1, ph2, ph3, email )    
-       values ( #{id} , #{pwd} ,#{name} ,#{nickname} , #{birthy} ,#{birthm} ,#{birthd}, #{ph1}, #{ph2}, #{ph3}, #{email} )
-    ]]>
- </insert>
-
+<mapper namespace="UserMapper">
+	<!-- 회원가입 -->
+	<insert id="insertUser">
+	      INSERT INTO GIL_USER ( ID, PWD, P_SHA256, P_BCRYPT, NAME, PHONE, EMAIL )    
+	         VALUES( #{id}, #{pwd}, #{p_sha256}, #{p_bcrypt}, #{name}, #{phone}, #{email})
+	</insert>
 
 </mapper>
