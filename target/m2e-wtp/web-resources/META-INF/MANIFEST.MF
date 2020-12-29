@@ -1,5 +1,13 @@
+<<<<<<< Updated upstream
 Manifest-Version: 1.0
 Built-By: gil
 Build-Jdk: 1.8.0_60
 Created-By: Maven Integration for Eclipse
 
+=======
+Manifest-Version: 1.0
+Built-By: yseonjin
+Build-Jdk: 14.0.2
+Created-By: Maven Integration for Eclipse
+
+>>>>>>> Stashed changes
