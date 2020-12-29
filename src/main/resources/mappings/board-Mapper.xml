@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+
+  <!--  idx id filename regdate title  content flag-->
+  
+  <!-- 공지 글 등록 --> 
+<insert id="insertNotice">
+	 <![CDATA[
+       insert  into gil_board ( idx, id, filename, title, content, flag )    
+       values ( #{idx}, #{id}, #{filename} ,#{title} ,#{content} ,#{flag} )
+    ]]>
+ </insert>
+
+
+
+</mapper>
