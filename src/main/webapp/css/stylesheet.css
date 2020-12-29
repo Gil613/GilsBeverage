@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/*
+
+배경색 : backgroun-color:;
+배경이미지 : background-image: url("경로");
+배경이미지 반복 : background-repeat:no-repeat(반복 x),repeat-x(수평반복),repeat-y(수직반복);
+배경이미지의 상대 위치 : 왼쪽 상단 기준, 픽셀 단위로 직접 명시 가능
+background-position: 
+left top, left center, left bottom, 
+right top, right center, right bottom, 
+center top, center center, center bottom
+배경이미지 고정 : background-attachment:fixed; (스크롤해도 배경이미지는 고정)
+
+
+글자색 : color:;
+글자간격 조정 : letter-spacing: 1px;
+단어간격 조정 : word-spacing: 1px;
+들여쓰기 : text-indent:1px;
+글자 정렬 : text-align: center,right,left;
+줄 긋기 : text-decoration:overline, line-through, none, underline,;
+
+테이블 테두리 :  border : 1px
+테두리 한 줄로 표현 : border-collapse:collapse;
+테두리 없이 수평 나눔선으로 표현 : border-bottom:1px;
+커서위치 색변경: tr:hover {background-color:}
+줄마다 색 변경 : tr:nth-child{background-color:}
+*/
+
+<style>
+
+#header{
+	background-color:#F4BBDE;
+	color:#0000CD;
+	text-align : center;
+}
+#header{
+	background-color:#F4BBDE;
+	color:#0000CD;
+	font-size:40px;
+	text-align : center;
+	padding-top:20px;
+	padding-left:10px;
+	height:70px;
+}
+#footer{
+	background-color:#F4BBDE;
+	color:#0000CD;
+	text-align : center;
+}
+img{
+	align:center;
+	width:80px;
+}
+h1{
+	font-size:100px;
+	color:black;
+}
+
+#body{
+	align:center;
+	background-color:#B7A4EE;
+	padding-top:20px;
+	height:600px;
+}
+#text{
+	text-align:center;
+	text-indent:3px;
+	font-size:15px;
+	color:#EBF5FF;
+}
+
+
+
+</style>
