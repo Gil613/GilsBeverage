@@ -5,29 +5,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="./css/login.css">
 </head>
+<div id="outline"></div>
 <body>
+<div align="center">
 <form action="login.do" method="post">
-	<table>
-		<tr>
-			<td>아이디</td>
-			<td>
-				<input type="text" name="id">
-			</td>
-		</tr>
-		<tr>
-			<td>비밀번호</td>
-			<td>
-				<input type="password" name="pwd">
-			</td>
-		</tr>
-		<tr>
-			<td colspan=2>
-				<input type="submit" value="login">
-			</td>
-		</tr>
-	</table>
+
+	<div id="title">Gil's Beverage Shop</div><br>
+
+	<input type="text" id="btn_text" name="id" placeholder="ID"><br>
+
+	<input type="password" id="btn_pwd" name="pwd" placeholder="PWD"><br>
+
+	<input type="submit" value="Login"><br>
+
+	<a href="join.jsp"><input type=button id="btn_1" value="Sign Up"/></a>
 </form>
-<a href="join.jsp"><button>가입하기</button></a>
+</div>
 </body>
 </html>

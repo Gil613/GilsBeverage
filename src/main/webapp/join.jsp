@@ -10,7 +10,7 @@
 
 <style>
 	input::placeholder {
-		direction:rtl;
+		direction: ltr;
 	}
 </style>
 

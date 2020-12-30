@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+#outline {
+	margin-bottom:100px;
+}
+
+table.table_0 {
+	border:1px solid black;
+	border-collapse:seperate;
+	border-spacing:20px;
+	border-radius:10px;
+	width:600px;
+	height:400px;
+}
+
+table.table_0 tr{
+	text-align:center;
+}
+
+table.table_0 th{
+}
+
+#title {
+	font-family:Serendipity;
+	font-size:45px;
+}
+
+input[type=text]{
+	width:200px;
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+input[type=password]{
+	width:200px;
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom:20px;
+}
+
+btn_pwd {
+	
+}
+
+input[type=submit]{
+	border:1px solid black;
+	border-radius:10px;
+	padding:5px;
+	margin-bottom:10px;
+	background-color:rgba(0,0,0,0);
+}
+
+input[type=submit]:hover{
+	color:black;
+	background-color:orange;
+}
+
+input[type=button] {
+	border:1px solid black;
+	border-radius:10px;
+	padding:5px;
+	background-color:rgba(0,0,0,0);
+}
+
+input[type=button]:hover {
+	color:black;
+	background-color:orange;
+}
