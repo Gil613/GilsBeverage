@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,7 @@ public class BoardController {
 	private BoardService s;
 	
 	@RequestMapping(value="/insertNotice.do")
-	public String insertNotice(BoardVO vo, HttpServletRequest request, Model model) throws IOException{
+	public String insertNotice(BoardVO vo, HttpServletRequest request, Model model, HttpSession session) throws IOException{
 		String save="/board/";
 		ServletContext context =request.getSession().getServletContext();
 		String RealPath = context.getRealPath(save);
@@ -59,6 +60,7 @@ public class BoardController {
 		}else {
 			vo.setFilename("trash.jpg");
 		}
+		session.setAttribute("id", vo.getId());
 		s.noticeInsert(vo);
 		
 		return "noticeContent.do";

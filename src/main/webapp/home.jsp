@@ -5,6 +5,7 @@
 
 <img id="main_img" src="./img/main_3.jpeg">
 
+
 <c:import url="top.jsp" />
 
 <style type="text/css"> 
