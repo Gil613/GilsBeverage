@@ -12,11 +12,10 @@ public class UserController {
 	
 	@Autowired
 	private UserService s;
-	
+	// 회원가입
 	@RequestMapping(value = "/join.do")
 	public String insertUser(UserVO vo) {
 		s.insertUser(vo);
-		
 		return "home.jsp";
 	}
 }
