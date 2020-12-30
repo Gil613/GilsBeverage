@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="login.do">
+<form action="login.do" method="post">
 	<table>
 		<tr>
 			<td>아이디</td>
@@ -18,7 +18,7 @@
 		<tr>
 			<td>비밀번호</td>
 			<td>
-				<input type="text" name="pwd">
+				<input type="password" name="pwd">
 			</td>
 		</tr>
 		<tr>
