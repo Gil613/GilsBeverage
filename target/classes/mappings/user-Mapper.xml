@@ -7,5 +7,11 @@
 	      INSERT INTO GIL_USER ( ID, PWD, P_SHA256, P_BCRYPT, NAME, PHONE, EMAIL )    
 	         VALUES( #{id}, #{pwd}, #{p_sha256}, #{p_bcrypt}, #{name}, #{phone}, #{email})
 	</insert>
+	<!-- 로그인구현 -->
+	<select id="loginUser" resultType="user">
+		SELECT * 
+		FROM GIL_USER
+		WHERE ID =  #{id} AND PWD = #{pwd}
+	</select>
 
 </mapper>
