@@ -17,10 +17,10 @@
 	<a href="">커뮤니티</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<!-- master 관리자 아이디만 등록노출 -->
 	<c:if test="${id eq 'master'}">
-		<a href="register.jsp">등록</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<a href="product_register.jsp">등록</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	</c:if>
-	
 	<c:if test="${id != null}">
+		<a href="editUser.do">회원정보수정</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<a href="logout.do">${id}님 로그아웃</a>
 	</c:if>
 	<c:if test="${id == null}">

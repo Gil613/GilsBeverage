@@ -39,6 +39,12 @@ public class UserController {
 		session.invalidate();
 		return "home.jsp";
 	}
+	// 회원정보수정
+	@RequestMapping(value = "/editUser.do")
+	public String editUser(UserVO vo) {
+		return null;
+		
+	}
 	
 	
 }
