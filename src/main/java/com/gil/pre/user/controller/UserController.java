@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.gil.shop.user.service.UserService;
 import com.gil.shop.user.vo.UserVO;
@@ -21,7 +22,7 @@ public class UserController {
 		return "home.jsp";
 	}
 	// 로그인구현
-	@RequestMapping(value = "/login.do")
+	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
 	public String loginUser(UserVO vo, HttpSession session) {
 		String result = s.loginUser(vo);
 		System.out.println(result);
