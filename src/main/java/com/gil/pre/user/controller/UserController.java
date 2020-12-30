@@ -33,4 +33,12 @@ public class UserController {
 			return "login.jsp";
 		}
 	}
+	// 로그아웃
+	@RequestMapping(value = "/logout.do")
+	public String logout_ok(UserVO vo, HttpSession session) {
+		session.invalidate();
+		return "home.jsp";
+	}
+	
+	
 }
