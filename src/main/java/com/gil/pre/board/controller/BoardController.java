@@ -23,7 +23,7 @@ public class BoardController {
 	private BoardService s;
 	
 	@RequestMapping(value="/insertNotice.do")
-	String insertNotice(BoardVO vo, HttpServletRequest request, Model model) throws IOException{
+	public String insertNotice(BoardVO vo, HttpServletRequest request, Model model) throws IOException{
 		String save="/board/";
 		ServletContext context =request.getSession().getServletContext();
 		String RealPath = context.getRealPath(save);
@@ -62,6 +62,13 @@ public class BoardController {
 		s.noticeInsert(vo);
 		
 		return "noticeContent.do";
+	}
+	
+	@RequestMapping(value="/noticeList.do")
+	public String selectNotice(BoardVO vo, Model model) {
+		model.addAttribute("notice", s.selectNotice(vo));
+		
+		return "notice_list.jsp";
 	}
 	
 }
