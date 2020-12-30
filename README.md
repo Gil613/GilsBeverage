@@ -44,4 +44,7 @@ CREATE TABLE GIL_BOARD(
     Drop Table Gil_Product;
     Drop Table Gil_User;
     Drop Table Gil_Board;
+    
+    DROP SEQUENCE BOARD_IDX_SEQUENCE;
+    DROP SEQUENCE PRODUCT_IDX_SEQUENCE;
 ~~~
