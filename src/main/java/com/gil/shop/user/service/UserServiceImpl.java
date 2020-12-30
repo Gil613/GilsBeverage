@@ -16,5 +16,10 @@ public class UserServiceImpl implements UserService{
 	public void insertUser(UserVO vo) {
 		dao.insertUser(vo);
 	}
+	// 로그인구현
+	@Override
+	public String loginUser(UserVO vo) {
+		return dao.loginUser(vo);
+	}
 
 }
