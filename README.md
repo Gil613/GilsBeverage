@@ -38,4 +38,8 @@ CREATE TABLE GIL_BOARD(
     CREATE SEQUENCE BOARD_IDX_SEQUENCE 
     START WITH 1
     INCREMENT BY 1;
+    
+    Drop Table Gil_Product;
+    Drop Table Gil_User;
+    Drop Table Gil_Board;
 ~~~
