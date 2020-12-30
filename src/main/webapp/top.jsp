@@ -12,7 +12,7 @@
 <div id="text">
 	<a href="home.jsp">홈으로</a>&emsp;&emsp;&emsp;&emsp;
 		
-	<a href="">공지</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	<a href="noticeList.do">공지</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<a href="">칵테일</a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<a href="">커뮤니티</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<a href="register.jsp">등록</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;

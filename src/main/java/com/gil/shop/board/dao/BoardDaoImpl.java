@@ -1,5 +1,7 @@
 package com.gil.shop.board.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -18,8 +20,14 @@ public class BoardDaoImpl implements BoardDao{
 	}
 
 	@Override
-	public BoardDao selectId() {
+	public BoardVO selectId() {
 		return sst.selectOne("BoardDAO.selectId");
+	}
+
+	@Override
+	public List<BoardVO> selectNotice(BoardVO vo) {
+		
+		return sst.selectList("BoardDAO.selectNotice", vo);
 	}
 	
 }

@@ -9,10 +9,16 @@
 <insert id="insertNotice">
 	 <![CDATA[
        insert  into gil_board ( idx, id, filename, title, content, flag )    
-       values ( #{idx}, #{id}, #{filename} ,#{title} ,#{content} ,#{flag} )
+       values ( board_idx_sequence.nextval, #{id}, #{filename} ,#{title} ,#{content} ,#{flag} )
     ]]>
  </insert>
 
+<!-- 공지 글 목록 -->
+<select id="selectNotice" resultType="board">
+<![CDATA[
+       select idx, title, regdate from gil_board
+    ]]>
+</select>
 
 
 </mapper>

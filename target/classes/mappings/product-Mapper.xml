@@ -7,7 +7,7 @@
 <insert id="pinsert">
 <![CDATA[
 	insert into gil_product(idx, filename, ptype, pname, pcontent,  capacity, cost)
-	values(seq_idx.nextval, #{filename},#{ptype},#{pname},#{pcontent},#{capacity},#{cost})	
+	values(PRODUCT_IDX_SEQUENCE.nextval, #{filename},#{ptype},#{pname},#{pcontent},#{capacity},#{cost})	
 	]]>
 </insert>
 

@@ -1,5 +1,7 @@
 package com.gil.shop.board.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,8 +21,14 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public BoardDao selectId() {
+	public BoardVO selectId() {
 		return dao.selectId();
+	}
+
+	@Override
+	public List<BoardVO> selectNotice(BoardVO vo) {
+		
+		return dao.selectNotice(vo);
 	}
 
 }
