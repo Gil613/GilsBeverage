@@ -4,8 +4,8 @@
 
 <style type="text/css"> 
 	a { text-decoration:none } 
-	a:link { color:white }
-	a:visited { color:white }
+	a:link { color:black }
+	a:visited { color:black }
 </style> 
 
 <div id="basic_top">

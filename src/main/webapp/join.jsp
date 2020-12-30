@@ -7,56 +7,64 @@
 <head>
 <link rel="stylesheet" href="./css/join.css">
 <meta charset="UTF-8">
+
+<style>
+	input::placeholder {
+		direction:rtl;
+	}
+</style>
+
 <title>Insert title here</title>
 </head>
 <body>
 <div align="center">
-<h1>회원가입</h1>
+<div id="text1">회원가입</div>
+<hr id="hr">
 <div>
 <form method="post" name="f1" action="join.do">
-	<table>
+	<table class="t_1">
 		<tr>
-			<td>아이디</td>
+			<th id="text2">아이디</th>
 		</tr>
 		<tr>
-			<td>
-				<input type="text" name="id" >
-			</td>
-		</tr>
-
-		<tr>
-			<td>비밀번호</td>
-		</tr>
-		<tr>
-			<td>
-				<input type="password" name="pwd">
-			</td>
+			<th>
+				<input type="text" name="id" placeholder="ex) jdk1234">
+			</th>
 		</tr>
 
 		<tr>
-			<td>이름</td>
+			<th id="text3">비밀번호</th>
 		</tr>
 		<tr>
-			<td>
-				<input type="text" name="name">
-			</td>
+			<th>
+				<input type="password" name="pwd" placeholder="ex) jdk1234!@">
+			</th>
+		</tr>
+
+		<tr>
+			<th id="text4">이름</th>
+		</tr>
+		<tr>
+			<th>
+				<input type="text" name="name" placeholder="ex) allen">
+			</th>
 		</tr>
 		 <tr>
-			 <td id="text2">전화번호</td>
+			 <th id="text5">전화번호</th>
 		 </tr>
 		 <tr>
-			 <td>
-			 	  <input type="text" name="phone" placeholder="010-0000-0000">
-			 </td>
+			 <th>
+			 	  <input type="text" name="phone" placeholder="ex) 010-0000-0000">
+			 </th>
 		 </tr>
 		 
 		 <tr>
-			 <td id="text1">이메일</td>
+			 <th id="text6">이메일</th>
 		 </tr>
 		 <tr>
-			 <td>
-			 	<input type="text" name="email" placeholder="aaa@naver.com">
-			 </td>
+			 <th>
+			 	<input type="text" id="btn_1" name="email" placeholder="ex) aaa@naver.com">
+			 </th>
 		</tr>
 		 
 		</table>

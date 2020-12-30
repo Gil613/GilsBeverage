@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+#text1 {
+	font-size:30px;
+	font-family:arial;
+	padding-top:50px;
+	padding-bottom:15px;
+}
+
+hr {
+	width:500px;
+}
+
+table.t_1 {
+	margin-top:30px;
+	border-collapse: separate;
+	border-spacing: 15px -40px;
+	border:1px solid white;
+	width:500px;
+	height:400px;
+}
+
+#text2 {
+	font-size:15px;
+	padding-top:15px;
+	padding-left:110px;
+	text-align:left;
+}
+
+#text3 {
+	font-size:15px;
+	text-align:left;
+	padding-left:110px;
+}
+
+#text4 {
+	font-size:15px;
+	text-align:left;
+	padding-top:10px;
+	padding-left:110px;
+}
+
+#text5 {
+	font-size:15px;
+	text-align:left;
+	padding-left:110px;
+}
+
+#text6 {
+	font-size:15px;
+	text-align:left;
+	padding-left:110px;
+}
+
+input[type=text] {
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	width:250px;
+	margin-bottom:15px;
+	margin-right:10px;
+}
+
+
+input[type=password] {
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	width:250px;
+	margin-right:10px;
+}
+
+input[type=submit] {
+	padding:3px;
+	background-color:rgba(0,0,0,0);
+	border:1px solid black;
+	border-radius:5px;
+	margin-bottom:30px;
+}
+
+input[type=submit]:hover {
+	color:black;
+	background-color:orange;
+}
+
+input[type=reset] {
+	padding:3px;
+	background-color:rgba(0,0,0,0);
+	border:1px solid black;
+	border-radius:5px;
+	margin-bottom:30px;
+}
+
+input[type=reset]:hover {
+	color:black;
+	background-color:orange;
+}
