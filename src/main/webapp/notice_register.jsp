@@ -17,7 +17,7 @@
 	<div id="title">공지 등록</div><br>
 		<form action="insertNotice.do" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="flag" value="notice">
-		<input type="hidden" name="id" value="${id}">
+		<input type="hidden" name="id" value="master">
 		<table class="table_0">
 			<tr><td id="table_text_0">사진</td><td><input type="file" name="uploadFile"></td></tr>
 			

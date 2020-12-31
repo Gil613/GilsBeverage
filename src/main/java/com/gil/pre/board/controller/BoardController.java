@@ -25,11 +25,10 @@ public class BoardController {
 	
 	@RequestMapping(value="/insertNotice.do")
 	public String insertNotice(BoardVO vo, HttpServletRequest request, Model model, HttpSession session) throws IOException{
-		String save="/board/";
+		String save="/notice/";
 		ServletContext context =request.getSession().getServletContext();
 		String RealPath = context.getRealPath(save);
 		MultipartFile uploadfile = vo.getUploadFile();
-		System.out.println(RealPath);
 
 		
 		long time = System.currentTimeMillis();
@@ -57,13 +56,18 @@ public class BoardController {
 				uploadfile.transferTo(new File(RealPath  + fileName));
 				vo.setFilename(fileName);
 			}
-		}else {
-			vo.setFilename("trash.jpg");
-		}
+			}else {
+				vo.setFilename("trash.jpg");
+			}
 		session.setAttribute("id", vo.getId());
 		s.noticeInsert(vo);
-		
-		return "noticeContent.do";
+		System.out.println("idx 최댓값 들어가기 전");
+		int idx = s.selectMaxidx();
+		vo.setIdx(idx);
+		System.out.println("MaxIdx : " + idx);
+		model.addAttribute("nb", s.selectOneForNotice(vo));
+		System.out.println("모델 값 받아옴");
+		return "notice_content.jsp";
 	}
 	
 	@RequestMapping(value="/noticeList.do")

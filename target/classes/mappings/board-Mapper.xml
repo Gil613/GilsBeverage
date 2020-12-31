@@ -9,7 +9,7 @@
 <insert id="insertNotice">
 	 <![CDATA[
        insert  into gil_board ( idx, id, filename, title, content, flag )    
-       values ( board_idx_sequence.nextval, #{id}, #{filename} ,#{title} ,#{content} ,#{flag} )
+       values ( (select nvl(max(idx), 0)+1 from gil_board), #{id}, #{filename} ,#{title} ,#{content} ,#{flag} )
     ]]>
  </insert>
 
@@ -20,5 +20,18 @@
     ]]>
 </select>
 
+<!-- 저장하면 이동할 페이지 비교하는 idx 가져오기 -->
+<select id="selectMaxidx" resultType="integer">
+<![CDATA[
+       select max(idx) from gil_board
+    ]]>
+</select>
+
+<!--  공지글 상세보기 -->
+<select id="selectNoticeIdx" resultType="board">
+<![CDATA[
+       select title, filename, content from gil_board where idx=${idx}
+    ]]>
+</select>
 
 </mapper>

@@ -21,14 +21,20 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public BoardVO selectId() {
-		return dao.selectId();
+	public int selectMaxidx() {
+		return dao.selectMaxidx();
 	}
 
 	@Override
 	public List<BoardVO> selectNotice(BoardVO vo) {
 		
 		return dao.selectNotice(vo);
+	}
+
+	@Override
+	public BoardVO selectOneForNotice(BoardVO vo) {
+		
+		return dao.selectOneForNotice(vo);
 	}
 
 }
