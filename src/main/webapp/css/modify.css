@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+#body {
+	font-family:arial;
+}
+
+#title {
+	font-size:30px;
+	padding-top:60px;
+	padding-bottom:0px;
+}
+
+table.table_0 {
+	border:1px solid white;
+	border-collapse:seperate;
+	border-spacing:0 15px;
+}
+
+table.table_0 tr{
+	
+}
+
+table.table_0 th{
+}
+
+#img {
+	padding-top:38px;
+	width:70;
+	height:50;
+}
+#table_text_0 {
+	font-size:15px;
+	padding-right:15px;
+}
+
+input[type=file] {
+	
+}
+
+#table_text_1 {
+	font-size:15px;
+	padding-right:15px;
+}
+
+#table_text_2 {
+	font-size:15px;
+	padding-right:15px;
+}
+
+#table_text_3 {
+	font-size:15px;
+	padding-right:15px;
+}
+
+#table_text_4 {
+	font-size:15px;
+	padding-right:15px;
+}
+
+input[type=submit] {
+	padding:3px 6px;
+	border:1px solid black;
+	border-radius:5px;
+	background-color:rgba(0,0,0,0);
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+input[type=submit]:hover {
+	color:black;
+	background-color:orange;
+}

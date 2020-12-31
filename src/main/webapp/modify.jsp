@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="stylesheet" href="./css/stylesheet.css">
+
 <c:import url="top.jsp" />
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="./css/modify.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -13,16 +14,16 @@
 <body>
 
 	<div align="center" id="body">
-	<h2>상품등록</h2><br>
+	<div id="title">상품 등록</div><br>
 		<form action="update.do" method="post" enctype="multipart/form-data">
-		<table border="1" width="400">
+		<table class="table_0">
 		<input type="hidden" name="idx" value="${m.idx}">
-			<tr><td>사진</td><td><img src="./product/${m.filename}"  width=70  height=50 />
+			<tr><td>사진</td><td><img id="img" src="./product/${m.filename}"/>
 			<br>
 			<input type="file" name="uploadFile" ></td></tr>
 			
 			<tr>
-			<td>이름</td>
+			<td id="table_text_1">이름</td>
 			<td>
 			<select name="ptype">
 			<option value="보드카" <c:if test="${m.ptype=='보드카'}">selected</c:if>>보드카</option>
@@ -36,11 +37,11 @@
 			</td>
 			</tr>
 			
-			<tr><td>내용</td><td><textarea name="pcontent" cols=40 rows=10>${m.pcontent}</textarea></td></tr>
+			<tr><td id="table_text_2">내용</td><td><textarea name="pcontent" cols=40 rows=10>${m.pcontent}</textarea></td></tr>
 			
-			<tr><td>용량</td><td><input type="text" name="capacity" value="${m.capacity}"></td></tr>
+			<tr><td id="table_text_3">용량</td><td><input type="text" name="capacity" value="${m.capacity}">ml</td></tr>
 			
-			<tr><td>가격</td><td><input type="text" name="cost" value="${m.cost}">원</td></tr>
+			<tr><td id="table_text_4">가격</td><td><input type="text" name="cost" value="${m.cost}">원</td></tr>
 			<tr><td align="center" colspan="2"><input type="submit" value="수정"></td></tr>
 		</table>
 		</form>

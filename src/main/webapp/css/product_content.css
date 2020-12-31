@@ -1,44 +1,71 @@
 @charset "UTF-8";
 
-#title {
-	
+#outline {
+	padding-top:0px;
 }
 
 table.table_0 {
-	width:600px;
-	height:200px;
-	border:1px solid black;
+	width:1000px;
+	height:400px;
+	text-align:left;
 }
 
 #img_edit {
-	
+	padding-top:60px;
+	width:400px;
+	height:600px;
 }
 
 #text_0 {
-	border:1px solid black;
-	padding-top:0px;
-	padding-right:200px;
+	font-family:arial;
+	font-size:40px;
+	padding-right:150px;
+	padding-left:60px;
+	padding-bottom:15px;
 	width:50px;
 }
 
 #text_1 {
+	font-family:arial;
+	font-size:20px;
+	color:#5c5c5c;
 	padding-right:200px;
+	padding-left:60px;
+	padding-bottom:15px;
 	width:50px;
 }
 
 #text_2 {
-	padding-right:180px;
-	width:300px;
-	padding-bottom:0px;
+	font-family:arial;
+	font-size:20px;
+	color:#5c5c5c;
+	padding-right:200px;
+	padding-left:60px;
+	padding-bottom:30px;
 }
 
 
 #textarea {
-	 padding-right:200px;
-	 padding-bottom:0px;
-	 width:500px;
+	font-family:arial;
+	font-size:20px;
+	color:#5c5c5c;
+	padding-right:150px;
+	padding-left:60px;
+	padding-bottom:0px;
+	width:370px;
+	height:200px;
 }
 
-input[type=submit] {
-	
+input[type=button] {
+	border:1px splid black;
+	border-radius:5px;
+	background-color:rgba(0,0,0,0);
+	padding:3px 6px;
+	margin-top:60px;
+	margin-bottom:90px;
+}
+
+input[type=button]:hover {
+	color:black;
+	background-color:orange;
 }
