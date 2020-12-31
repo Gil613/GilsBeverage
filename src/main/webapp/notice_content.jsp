@@ -7,24 +7,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지 게시판</title>
+<title>Insert title here</title>
 </head>
 
 <body>
 	<div align="center" id=body>
-	<h2>공지 게시판</h2><br>
-	<a href="notice_register.jsp">글쓰기</a>
-	<table border=1 width="500">
-	<tr>
-	<th>글 번호</th><th>글 제목</th><th>작성 일</th>
-	</tr>
-	<c:forEach var="n" items="${notice}">
-	<tr>
-	<td>${n.idx}</td><td>${n.title}</td><td>${n.regdate}</td>
-	</tr>
-	</c:forEach>
+	<h2>공지 글</h2><br>
+	<table>
+	<tr><th>${nb.title}<hr></th></tr>
+	<tr><th><img id="img_edit" src="./notice/${nb.filename}" /><br>
+	${nb.content}</th></tr>
 	</table>
-	
 	</div>
 </body>
 </html>
