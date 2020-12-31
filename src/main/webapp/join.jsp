@@ -73,7 +73,7 @@
 
 
 	  <input type="submit" value="가입하기"> 
-	  <input type="reset" value="다시입력하기">
+	  <input type="button" onclick="location.href='login.jsp'" value="로그인하기">
 	<br><br>
 	</form>
 	

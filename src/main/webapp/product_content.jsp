@@ -11,26 +11,26 @@
 </head>
 
 <body>
-	<div align="center">
-		<div id="title">상품 보기</div>
+	<div id="outline" align="center">
 		<br>
 			<table class="table_0">
 				<tr>
-					<th rowspan=4><img id="img_edit" src="./product/${p.filename}" height=300 /></th>
-					<th id="text_0">이름 : ${p.pname}</th>
+					<th rowspan=4><img id="img_edit" src="./product/${p.filename}" /></th>
+					<th id="text_0">${p.pname}</th>
 				</tr>
 				<tr>
-					<th id="text_1">용량 : ${p.capacity}</th>
+					<th id="text_1">${p.capacity}</th>
 				</tr>
 				<tr>
-					<th id="text_2">가격 : ${p.cost} 원</th>
+					<th id="text_2">${p.cost} 원</th>
 				</tr>
 				<tr>
-					<th id="textarea">내용 : ${p.pcontent}</th>
+					<th id="textarea">${p.pcontent}</th>
 				</tr>
 			</table>
 	
-			<a href="modify.do?idx=${p.idx}">수정하기</a>
+			<a href="modify.do?idx=${p.idx}"><input type="button" value="수정하기"></a>
+			
 	</div>
 </body>
 </html>
