@@ -18,6 +18,7 @@
 	<tr><th><img id="img_edit" src="./notice/${nb.filename}" /><br>
 	${nb.content}</th></tr>
 	</table>
+	<a href="modifyNotice.do?idx=${nb.idx}">수정하기</a>
 	</div>
 </body>
 </html>

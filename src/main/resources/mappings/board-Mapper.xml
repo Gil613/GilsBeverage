@@ -30,8 +30,28 @@
 <!--  공지글 상세보기 -->
 <select id="selectNoticeIdx" resultType="board">
 <![CDATA[
-       select title, filename, content from gil_board where idx=${idx}
+       select idx, title, filename, content from gil_board where idx=${idx}
     ]]>
 </select>
+
+<!-- 공지 수정 페이지 -->
+<select id="selectForUpdate" resultType="board">
+<![CDATA[
+select filename from gil_board where idx=#{idx}
+]]>
+</select>
+<update id="updateNotice">
+<![CDATA[
+update gil_board set title=#{title}, filename=#{filename}, content=#{content}
+	where idx=#{idx}
+]]>
+</update>
+
+<!-- 공지 삭제 페이지 -->
+<delete id="deleteNotice">
+<![CDATA[
+delete gil_board where idx=${idx}
+]]>
+</delete>
 
 </mapper>

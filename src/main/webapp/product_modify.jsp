@@ -16,8 +16,8 @@
 	<div align="center" id="body">
 	<div id="title">상품 등록</div><br>
 		<form action="update.do" method="post" enctype="multipart/form-data">
-		<table class="table_0">
 		<input type="hidden" name="idx" value="${m.idx}">
+		<table class="table_0">
 			<tr><td>사진</td><td><img id="img" src="./product/${m.filename}"/>
 			<br>
 			<input type="file" name="uploadFile" ></td></tr>

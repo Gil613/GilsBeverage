@@ -165,6 +165,6 @@ public class ProductController {
 	@RequestMapping(value="/modify.do")
 	public String modify(ProductVO vo, Model model){
 		model.addAttribute("m", s.selectOne(vo));
-		return "modify.jsp";
+		return "product_modify.jsp";
 	}
 }
