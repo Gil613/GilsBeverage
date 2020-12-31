@@ -35,5 +35,23 @@ public class BoardDaoImpl implements BoardDao{
 		
 		return sst.selectOne("BoardDAO.selectNoticeIdx", vo);
 	}
+
+	@Override
+	public BoardVO selectOneForUpdate(BoardVO vo) {
+		
+		return sst.selectOne("BoardDAO.selectForUpdate", vo);
+	}
+
+	@Override
+	public void noticeUpdate(BoardVO vo) {
+		sst.update("BoardDAO.updateNotice", vo);
+		
+	}
+
+	@Override
+	public void noticeDelete(BoardVO vo) {
+		sst.delete("BoardDAO.deleteNotice", vo);
+		
+	}
 	
 }

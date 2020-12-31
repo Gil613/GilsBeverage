@@ -37,4 +37,22 @@ public class BoardServiceImpl implements BoardService{
 		return dao.selectOneForNotice(vo);
 	}
 
+	@Override
+	public BoardVO selectOneForUpdate(BoardVO vo) {
+		
+		return dao.selectOneForUpdate(vo);
+	}
+
+	@Override
+	public void noticeUpdate(BoardVO vo) {
+		dao.noticeUpdate(vo);
+		
+	}
+
+	@Override
+	public void noticeDelete(BoardVO vo) {
+		dao.noticeDelete(vo);
+		
+	}
+
 }

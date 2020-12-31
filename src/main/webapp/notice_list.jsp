@@ -20,9 +20,11 @@
 	</tr>
 	<c:forEach var="n" items="${notice}">
 	<tr>
-	<td>${n.idx}</td><td>${n.title}</td><td>${n.regdate}</td>
+	<td>${n.idx}</td><td><a href="notice_content.do?idx=${n.idx}">${n.title}</td></td><td>${n.regdate}</td>
+	<th><input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제"></th>
 	</tr>
 	</c:forEach>
+	
 	</table>
 	
 	</div>
