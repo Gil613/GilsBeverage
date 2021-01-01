@@ -21,7 +21,7 @@
 <div id="text1">회원정보수정</div>
 <hr id="hr">
 <div>
-<form method="post" name="f1" action="join.do">
+<form method="post" name="f1" action="editUserOk.do">
 	<table class="t_1">
 		<tr>
 			<th id="text2">아이디</th>
@@ -71,6 +71,7 @@
 		<br><br><br>
 		<!--<input type=submit  value="등록">-->
 	  <input type="submit" value="수정완료"> 
+	  <a href="deleteUser.do?id=${user.id}"><input type="button" value="회원탈퇴"></a>
 	  <input type="button" onclick="location.href='home.jsp'" value="뒤로가기">
 	<br><br>
 	</form>
