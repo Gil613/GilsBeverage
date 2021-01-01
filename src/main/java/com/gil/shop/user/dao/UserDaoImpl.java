@@ -54,5 +54,11 @@ public class UserDaoImpl implements UserDao{
 		}
 		return log;
 	}
+	// 회원정보수정
+	@Override
+	public UserVO editUser(UserVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

@@ -21,5 +21,10 @@ public class UserServiceImpl implements UserService{
 	public String loginUser(UserVO vo) {
 		return dao.loginUser(vo);
 	}
+	// 회원정보수정
+	@Override
+	public UserVO editUser(UserVO vo) {
+		return dao.editUser(vo);
+	}
 
 }
