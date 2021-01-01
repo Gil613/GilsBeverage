@@ -13,5 +13,11 @@
 		FROM GIL_USER
 		WHERE ID =  #{id} AND PWD = #{pwd}
 	</select>
+	<!-- 회원정보수정 -->
+	<select id="editUser" resultType="user">
+		SELECT ID, PWD, NAME, PHONE, EMAIL 
+		FROM GIL_USER
+		WHERE ID = #{id}
+	</select>
 
 </mapper>
