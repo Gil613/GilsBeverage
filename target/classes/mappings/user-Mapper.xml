@@ -19,5 +19,10 @@
 		FROM GIL_USER
 		WHERE ID = #{id}
 	</select>
+	<update id="editUserOk">
+		UPDATE GIL_USER 
+		SET PWD = #{pwd}, P_SHA256 = #{p_sha256}, P_BCRYPT = #{p_bcrypt}, PHONE = #{phone}, EMAIL = #{email}
+		WHERE ID = #{id}  
+	</update>
 
 </mapper>

@@ -47,6 +47,12 @@ public class UserController {
 		model.addAttribute("user", s.editUser(vo));
 		return "editUser.jsp";
 	}
+	// 회원정보수정완료
+	@RequestMapping(value = "/editUserOk.do", method = RequestMethod.POST)
+	public String editUserOK(UserVO vo) {
+		s.editUserOk(vo);
+		return "editUserOk.jsp";
+	}
 	
 	
 }
