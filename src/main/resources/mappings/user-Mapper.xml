@@ -19,10 +19,16 @@
 		FROM GIL_USER
 		WHERE ID = #{id}
 	</select>
+	<!-- 회원정보수정완료 -->
 	<update id="editUserOk">
 		UPDATE GIL_USER 
 		SET PWD = #{pwd}, P_SHA256 = #{p_sha256}, P_BCRYPT = #{p_bcrypt}, PHONE = #{phone}, EMAIL = #{email}
 		WHERE ID = #{id}  
 	</update>
+	<!-- 회원탈퇴 -->
+	<delete id="deleteUser">
+		DELETE FROM GIL_USER
+		WHERE ID = #{id}
+	</delete>
 
 </mapper>

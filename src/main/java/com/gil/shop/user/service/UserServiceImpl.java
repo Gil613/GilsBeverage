@@ -31,5 +31,10 @@ public class UserServiceImpl implements UserService{
 	public void editUserOk(UserVO vo) {
 		dao.editUserOk(vo);
 	}
+	// 회원탈퇴
+	@Override
+	public void deleteUser(UserVO vo) {
+		dao.deleteUser(vo);
+	}
 
 }

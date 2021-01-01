@@ -7,5 +7,6 @@ public interface UserDao {
 	String loginUser(UserVO vo);
 	UserVO editUser(UserVO vo);
 	void editUserOk(UserVO vo);
+	void deleteUser(UserVO vo);
 
 }
