@@ -53,6 +53,14 @@ public class UserController {
 		s.editUserOk(vo);
 		return "editUserOk.jsp";
 	}
+	// 회원탈퇴
+	@RequestMapping(value = "/deleteUser.do")
+	public String deleteUser(UserVO vo, HttpSession session) {
+		s.deleteUser(vo);
+		session.invalidate();
+		return "deleteUser.jsp";
+	}
+	
 	
 	
 }

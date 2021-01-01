@@ -64,15 +64,20 @@ public class UserDaoImpl implements UserDao{
 	public void editUserOk(UserVO vo) {
 		// 수정된 비밀번호 암호화
 	    try {
-	    	SHA256 sha = SHA256.getInsatnce();
-	    	String shaPass = sha.getSha256(vo.getPwd().getBytes());
-	    	String bcPass = BCrypt.hashpw(shaPass, BCrypt.gensalt());
-	    	vo.setP_sha256(shaPass);
-	    	vo.setP_bcrypt(bcPass);		
+		    	SHA256 sha = SHA256.getInsatnce();
+		    	String shaPass = sha.getSha256(vo.getPwd().getBytes());
+		    	String bcPass = BCrypt.hashpw(shaPass, BCrypt.gensalt());
+		    	vo.setP_sha256(shaPass);
+		    	vo.setP_bcrypt(bcPass);		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	    sst.update("UserMapper.editUserOk", vo);
+	}
+	// 회원탈퇴
+	@Override
+	public void deleteUser(UserVO vo) {
+		sst.delete("UserMapper.deleteUser", vo);
 	}
 	
 }
