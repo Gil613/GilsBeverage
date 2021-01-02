@@ -5,28 +5,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="./css/brandylist.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 
 <body>
+	<div id="title" align="center">Brandy List</div><br>
 	<div align="center" id=body>
-	<table border=1>
+	<table class="table_0">
+
+	<c:forEach items="${brandy}" var="B">
 	<tr>
-	<td>사진</td><td>이름</td><td>용량</td><td>가격</td>
-	</tr>
-	<c:forEach items="${brandy}" var="b">
-	<tr>
-	<td><img src="./product/${b.filename}"  width=70  height=50 /></td>
-	<td><a href="content.do?idx=${b.idx}">${b.pname}</a></td>
-	<td>${b.capacity}</td>
-	<td>${b.cost}</td>
-	<td><button onclick="location.href='delete.do?idx=${w.idx}'" >삭제</button></td>
+	
+	<th id="th1"><img id="img" src="./product/${b.filename}"/></th>
+	<th id="th2"><a href="contenb.do?idx=${b.idx}">${b.pname}</a></th>
+	<th id="th3">${b.capacity}</th>
+	<th id="th4">${b.cost}</th>
+	<th><input type="button" onclick="location.href='delete.do?idx=${b.idx}'" value="삭제"></th>
+	
 	</tr>
 	</c:forEach>
 	</table>
 	</div>
 </body>
+<div id="bottom_line"></div>
 </html>
 
 <c:import url="bottom.jsp" />
