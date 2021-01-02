@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gil.shop.board.dao.BoardDao;
+import com.gil.shop.board.dao.BoardNoticeDao;
 import com.gil.shop.board.vo.BoardVO;
 
 @Service
-public class BoardServiceImpl implements BoardService{
+public class BoardNoticeServiceImpl implements BoardNoticeService{
 
 	@Autowired
-	private BoardDao dao;
+	private BoardNoticeDao dao;
 	
 	@Override
 	public void noticeInsert(BoardVO vo) {

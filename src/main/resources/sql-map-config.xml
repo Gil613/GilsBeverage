@@ -4,6 +4,11 @@
                 "http://mybatis.org/dtd/mybatis-3-config.dtd" >
 <configuration>
 
+<settings> 
+<setting name="cacheEnabled" value="false" /> 
+<setting name="jdbcTypeForNull" value="NULL" /> 
+</settings>
+
  <typeAliases>
      <typeAlias type="com.gil.shop.product.vo.ProductVO"   alias="product" />
       <typeAlias type="com.gil.shop.user.vo.UserVO"   alias="user" />
