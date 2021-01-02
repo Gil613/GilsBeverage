@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.gil.shop.board.vo.BoardVO;
 
 @Repository
-public class BoardDaoImpl implements BoardDao{
+public class BoardNoticeDaoImpl implements BoardNoticeDao{
 
 	@Autowired
 	private SqlSessionTemplate sst;

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.gil.shop.board.vo.BoardVO;
 
-public interface BoardDao {
+public interface BoardNoticeDao {
 	void noticeInsert(BoardVO vo);
 	void noticeUpdate(BoardVO vo);
 	void noticeDelete(BoardVO vo);

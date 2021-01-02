@@ -15,7 +15,8 @@
 	<h2>공지 글</h2><br>
 	<table>
 	<tr><th>${nb.title}<hr></th></tr>
-	<tr><th><img id="img_edit" src="./notice/${nb.filename}" /><br>
+	<tr><th><c:if test="${nb.filename ne null}"><img id="img_edit" src="./notice/${nb.filename}" /></c:if>
+	<br>
 	${nb.content}</th></tr>
 	</table>
 	<a href="modifyNotice.do?idx=${nb.idx}">수정하기</a>
