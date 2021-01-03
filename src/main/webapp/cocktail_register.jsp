@@ -14,7 +14,7 @@
 <body>
 
 	<div align="center" id="body">
-	<div id="title">공지 등록</div><br>
+	<div id="title">칵테일 등록</div><br>
 		<form action="insertCocktail.do" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="flag" value="cocktail">
 		<input type="hidden" name="id" value="master">
@@ -29,7 +29,6 @@
 			</tr>
 			
 			<tr><td id="table_text_2">내용</td><td><textarea name="content" cols=40 rows=10></textarea></td></tr>
-			
 			
 			<tr><td align="center" colspan="2"><input type="submit" value="글 등록"></td></tr>
 		</table>

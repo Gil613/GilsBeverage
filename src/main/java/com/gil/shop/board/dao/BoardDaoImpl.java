@@ -9,13 +9,13 @@ import org.springframework.stereotype.Repository;
 import com.gil.shop.board.vo.BoardVO;
 
 @Repository
-public class BoardNoticeDaoImpl implements BoardNoticeDao{
+public class BoardDaoImpl implements BoardDao{
 
 	@Autowired
 	private SqlSessionTemplate sst;
 	
 	@Override
-	public void noticeInsert(BoardVO vo) {
+	public void boardInsert(BoardVO vo) {
 		sst.insert("BoardDAO.insertNotice", vo);		
 	}
 
@@ -25,13 +25,13 @@ public class BoardNoticeDaoImpl implements BoardNoticeDao{
 	}
 
 	@Override
-	public List<BoardVO> selectNotice(BoardVO vo) {
+	public List<BoardVO> selectBoard(BoardVO vo) {
 		
 		return sst.selectList("BoardDAO.selectNotice", vo);
 	}
 
 	@Override
-	public BoardVO selectOneForNotice(BoardVO vo) {
+	public BoardVO selectOneBoard(BoardVO vo) {
 		
 		return sst.selectOne("BoardDAO.selectNoticeIdx", vo);
 	}
@@ -43,15 +43,19 @@ public class BoardNoticeDaoImpl implements BoardNoticeDao{
 	}
 
 	@Override
-	public void noticeUpdate(BoardVO vo) {
+	public void boardUpdate(BoardVO vo) {
 		sst.update("BoardDAO.updateNotice", vo);
 		
 	}
 
 	@Override
-	public void noticeDelete(BoardVO vo) {
+	public void boardDelete(BoardVO vo) {
 		sst.delete("BoardDAO.deleteNotice", vo);
-		
+	}
+
+	@Override
+	public List<BoardVO> selectCocktail(BoardVO vo) {
+		return sst.selectList("BoardDAO.selectCocktail", vo);
 	}
 	
 }
