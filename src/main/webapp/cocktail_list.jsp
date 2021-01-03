@@ -24,7 +24,7 @@
 			<c:forEach var="c" items="${cocktail}">
 				<tr>
 					<td>${c.idx}</td>
-					<td>${c.filename}</td>
+					<td><img id="img" src="./cocktail/${c.filename}"/></td>
 					<td><a href="cocktail_content.do?idx=${c.idx}">${c.title}</a></td>
 					<td>${c.regdate}</td>
 					<th><input type="button"
