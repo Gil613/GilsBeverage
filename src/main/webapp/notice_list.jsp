@@ -42,7 +42,9 @@
 			<td>${n.idx}</td>
 			<td><a href="notice_content.do?idx=${n.idx}">${n.title}</a></td>
 			<td>${n.regdate}</td>
+			 <c:if test="${id eq 'master'}">
 			<td><input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제"></td>
+			</c:if>
 		</tr>
 	</c:forEach>
 	</table>
