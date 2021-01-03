@@ -30,8 +30,7 @@
 		<th id="th4">${m.email}</th>
 		<th id="th4">${m.regdate}</th>
 		<th>
-			<input type="button" onclick="location.href='delete.do?idx=${g.idx}'" value="삭제">&emsp;
-			<input type="button" onclick="location.href='edit.do?idx=${g.idx}'" value="수정">&emsp;
+			<input type="button" onclick="location.href='memberDelete.do?id=${m.id}'" value="삭제">&emsp;
 		</th>
 	</tr>
 	</c:forEach>

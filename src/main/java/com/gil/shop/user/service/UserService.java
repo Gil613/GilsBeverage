@@ -11,4 +11,5 @@ public interface UserService {
 	void editUserOk(UserVO vo);
 	void deleteUser(UserVO vo);
 	List<UserVO> memberList(UserVO vo);
+	void memberDelete(UserVO vo);
 }

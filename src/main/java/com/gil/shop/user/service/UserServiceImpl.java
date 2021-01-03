@@ -43,5 +43,9 @@ public class UserServiceImpl implements UserService{
 	public List<UserVO> memberList(UserVO vo) {
 		return dao.memberList(vo);
 	}
+	@Override
+	public void memberDelete(UserVO vo) {
+		dao.memberDelete(vo);
+	}
 
 }
