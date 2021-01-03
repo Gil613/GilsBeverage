@@ -28,9 +28,9 @@
 					<th id="textarea">${p.pcontent}</th>
 				</tr>
 			</table>
-	
+			<c:if test="${id eq 'master'}">
 			<a href="modify.do?idx=${p.idx}"><input type="button" value="수정하기"></a>
-			
+			</c:if>
 	</div>
 </body>
 </html>

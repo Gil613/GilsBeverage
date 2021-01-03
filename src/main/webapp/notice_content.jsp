@@ -19,7 +19,9 @@
 	<br>
 	${nb.content}</th></tr>
 	</table>
+	<c:if test="${id eq 'master'}">
 	<a href="modifyNotice.do?idx=${nb.idx}">수정하기</a>
+	</c:if>
 	</div>
 </body>
 </html>
