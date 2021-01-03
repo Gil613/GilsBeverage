@@ -69,10 +69,8 @@ public class BoardNoticeController {
 
 	// 공지 글 목록보기
 	@RequestMapping(value = "/noticeList.do")
-	public String selectNotice(BoardVO vo, Model model, HttpSession session) {
-		session.setAttribute("id", vo.getId());
+	public String selectNotice(BoardVO vo, Model model) {
 		model.addAttribute("notice", s.selectBoard(vo));
-
 		return "notice_list.jsp";
 	}
 
