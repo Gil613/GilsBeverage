@@ -15,16 +15,18 @@
 	<a href="noticeList.do">공지</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<a href="">칵테일</a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<a href="">커뮤니티</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	<!-- master 관리자 아이디만 등록노출 -->
-	<c:if test="${id eq 'master'}">
-		<a href="product_register.jsp">등록</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	</c:if>
 	<c:if test="${id != null}">
 		<a href="editUser.do">회원정보수정</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<a href="logout.do">${id}님 로그아웃</a>
 	</c:if>
 	<c:if test="${id == null}">
 		<a href="login.jsp">로그인</a>
+	</c:if>
+	<!-- master 관리자 아이디만 등록노출 -->
+	<c:if test="${id eq 'master'}">
+	<hr width=100%>
+		<a href="product_register.jsp">상품등록</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<a href="member_list.jsp">회원관리</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	</c:if>
 	<hr width=1600>
 </div>
