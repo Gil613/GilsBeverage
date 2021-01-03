@@ -15,13 +15,11 @@
 	<h2>공지 글</h2><br>
 	<table>
 	<tr><th>${nb.title}<hr></th></tr>
-	<tr><th><c:if test="${nb.filename ne null}"><img id="img_edit" src="./notice/${nb.filename}" /></c:if>
+	<tr><th><c:if test="${nb.filename ne 'space.jpg'}"><img id="img_edit" src="./notice/${nb.filename}" /></c:if>
 	<br>
 	${nb.content}</th></tr>
 	</table>
-	<c:if test="${id eq 'master'}">
 	<a href="modifyNotice.do?idx=${nb.idx}">수정하기</a>
-	</c:if>
 	</div>
 </body>
 </html>
