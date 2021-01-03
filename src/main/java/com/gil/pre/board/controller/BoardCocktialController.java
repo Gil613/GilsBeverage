@@ -29,7 +29,6 @@ public class BoardCocktialController {
 		ServletContext context =request.getSession().getServletContext();
 		String RealPath = context.getRealPath(save);
 		MultipartFile uploadfile = vo.getUploadFile();
-
 		
 		long time = System.currentTimeMillis();
 		SimpleDateFormat daytime = new SimpleDateFormat("HH-mm-ss");
@@ -77,7 +76,7 @@ public class BoardCocktialController {
 	//칵테일 글 조회하기
 	@RequestMapping(value="/cocktail_content.do")
 	public String selectNoticeContent(BoardVO vo, Model model) {
-		model.addAttribute("nb", s.selectOneBoard(vo));
+		model.addAttribute("c", s.selectOneBoard(vo));
 		return "cocktail_content.jsp";
 	}
 	
@@ -85,7 +84,7 @@ public class BoardCocktialController {
 	@RequestMapping(value="/modifyCocktail.do")
 	public String modifyNotice(BoardVO vo, Model model) {
 		model.addAttribute("c", s.selectOneBoard(vo));
-		return "notice_modify.jsp";
+		return "cocktail_modify.jsp";
 	}
 	
 	//칵테일 수정하기
