@@ -2,8 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="stylesheet" href="./css/home.css">
-<img id="main_img" src="./img/main_3.jpeg">
-
+<div align="center">
+<img id="main_img" src="./img/m_5_u.jpg">
+</div>
 
 <c:import url="top.jsp" />
 
