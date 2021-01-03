@@ -1,5 +1,7 @@
 package com.gil.shop.user.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -78,6 +80,11 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public void deleteUser(UserVO vo) {
 		sst.delete("UserMapper.deleteUser", vo);
+	}
+	// 회원목록보기
+	@Override
+	public List<UserVO> memberList(UserVO vo) {
+		return sst.selectList("UserMapper.memberList", vo);
 	}
 	
 }

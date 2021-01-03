@@ -26,7 +26,7 @@
 	<c:if test="${id eq 'master'}">
 	<hr width=100%>
 		<a href="product_register.jsp">상품등록</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-		<a href="member_list.jsp">회원관리</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<a href="member_list.do">회원관리</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	</c:if>
 	<hr width=1600>
 </div>

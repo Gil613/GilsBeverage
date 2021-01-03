@@ -60,6 +60,12 @@ public class UserController {
 		session.invalidate();
 		return "deleteUser.jsp";
 	}
+	//회원목록보기
+	@RequestMapping(value = "/member_list.do")
+	public String member_list(UserVO vo, Model model) {
+		model.addAttribute("member", s.memberList(vo));
+		return "member_list.jsp";
+	}
 	
 	
 	
