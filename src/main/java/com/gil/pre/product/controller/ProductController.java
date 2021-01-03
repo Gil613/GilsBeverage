@@ -123,37 +123,37 @@ public class ProductController {
 	@RequestMapping(value="/whisky.do")
 	public String whisky(ProductVO vo, Model model) {
 		model.addAttribute("whisky", s.whisky(vo));
-		return "whiskylist.jsp";
+		return "whisky_list.jsp";
 	}
 	
 	@RequestMapping(value="/vodka.do")
 	public String vodka(ProductVO vo, Model model) {
 		model.addAttribute("vodka", s.vodka(vo));
-		return "vodkalist.jsp";
+		return "vodka_list.jsp";
 	}
 	
 	@RequestMapping(value="/brandy.do")
 	public String brandy(ProductVO vo, Model model) {
 		model.addAttribute("brandy", s.brandy(vo));
-		return "brandylist.jsp";
+		return "brandy_list.jsp";
 	}
 	
 	@RequestMapping(value="/tequila.do")
 	public String tequila(ProductVO vo, Model model) {
 		model.addAttribute("tequila", s.tequila(vo));
-		return "tequilalist.jsp";
+		return "tequila_list.jsp";
 	}
 	
 	@RequestMapping(value="/gin.do")
 	public String gin(ProductVO vo, Model model) {
 		model.addAttribute("gin", s.gin(vo));
-		return "ginlist.jsp";
+		return "gin_list.jsp";
 	}
 	
 	@RequestMapping(value="/lw.do")
 	public String lw(ProductVO vo, Model model) {
 		model.addAttribute("lw", s.lw(vo));
-		return "lwlist.jsp";
+		return "lw_list.jsp";
 	}
 	
 	@RequestMapping(value="/content.do")

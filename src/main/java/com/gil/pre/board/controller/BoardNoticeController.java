@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.gil.shop.board.service.BoardNoticeService;
+import com.gil.shop.board.service.BoardService;
 import com.gil.shop.board.vo.BoardVO;
 
 @Controller
 public class BoardNoticeController {
 	
 	@Autowired
-	private BoardNoticeService s;
+	private BoardService s;
 	//공지 글쓰기
 	@RequestMapping(value="/insertNotice.do")
 	public String insertNotice(BoardVO vo, HttpServletRequest request, Model model, HttpSession session) throws IOException{
@@ -59,17 +59,17 @@ public class BoardNoticeController {
 				vo.setFilename(null);
 			}
 		session.setAttribute("id", vo.getId());
-		s.noticeInsert(vo);
+		s.boardInsert(vo);
 		int idx = s.selectMaxidx();
 		vo.setIdx(idx);
-		model.addAttribute("nb", s.selectOneForNotice(vo));
+		model.addAttribute("nb", s.selectOneBoard(vo));
 		return "notice_content.jsp";
 	}
 	
 	//공지 글 목록보기
 	@RequestMapping(value="/noticeList.do")
 	public String selectNotice(BoardVO vo, Model model) {
-		model.addAttribute("notice", s.selectNotice(vo));
+		model.addAttribute("notice", s.selectBoard(vo));
 		
 		return "notice_list.jsp";
 	}
@@ -77,14 +77,14 @@ public class BoardNoticeController {
 	//공지 글 조회하기
 	@RequestMapping(value="/notice_content.do")
 	public String selectNoticeContent(BoardVO vo, Model model) {
-		model.addAttribute("nb", s.selectOneForNotice(vo));
+		model.addAttribute("nb", s.selectOneBoard(vo));
 		return "notice_content.jsp";
 	}
 	
 	//공지 수정페이지 보기
 	@RequestMapping(value="/modifyNotice.do")
 	public String modifyNotice(BoardVO vo, Model model) {
-		model.addAttribute("nb", s.selectOneForNotice(vo));
+		model.addAttribute("nb", s.selectOneBoard(vo));
 		return "notice_modify.jsp";
 	}
 	
@@ -125,7 +125,7 @@ public class BoardNoticeController {
 		}else {
 			vo.setFilename(fn.getFilename());
 		} 
-		s.noticeUpdate(vo);
+		s.boardUpdate(vo);
 		return "noticeList.do";
 	}
 	
@@ -142,7 +142,7 @@ public class BoardNoticeController {
 		File f = new File(RealPath + fn.getFilename());
 		f.delete();
 		
-		s.noticeDelete(vo);
+		s.boardDelete(vo);
 		return "noticeList.do";
 	}
 	

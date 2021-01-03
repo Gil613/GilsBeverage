@@ -17,7 +17,7 @@
 <!-- 공지 글 목록 -->
 <select id="selectNotice" resultType="board">
 <![CDATA[
-       select idx, title, regdate from gil_board
+       select idx, title, regdate from gil_board where flag='notice'
     ]]>
 </select>
 
@@ -56,12 +56,19 @@ delete gil_board where idx=${idx}
 </delete>
 
 <!-- 칵테일 SQL -->
-  <!-- 칵테일 글 등록 --> 
+  <!-- 칵테일 글 등록 
 <insert id="insertCocktail">
 	 <![CDATA[
        insert  into gil_board ( idx, id, filename, title, content, flag )    
        values ( (select nvl(max(idx), 0)+1 from gil_board), #{id}, #{filename} ,#{title} ,#{content} ,#{flag} )
     ]]>
- </insert>
+ </insert>--> 
+ 
+ <!-- 칵테일 글 목록 -->
+<select id="selectCocktail" resultType="board">
+<![CDATA[
+       select idx, filename, title, regdate from gil_board where flag='cocktail'
+    ]]>
+</select>
 
 </mapper>

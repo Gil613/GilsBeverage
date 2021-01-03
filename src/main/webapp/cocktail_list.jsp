@@ -12,21 +12,29 @@
 
 <body>
 	<div align="center" id=body>
-	<h2>공지 게시판</h2><br>
-	<a href="notice_register.jsp">글쓰기</a>
-	<table border=1 width="500">
-	<tr>
-	<th>글 번호</th><th>글 제목</th><th>작성 일</th>
-	</tr>
-	<c:forEach var="n" items="${notice}">
-	<tr>
-	<td>${n.idx}</td><td><a href="notice_content.do?idx=${n.idx}">${n.title}</td></td><td>${n.regdate}</td>
-	<th><input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제"></th>
-	</tr>
-	</c:forEach>
-	
-	</table>
-	
+		<h2>칵테일 게시판</h2>
+		<br> <a href="cocktail_register.jsp">글쓰기</a>
+		<table border=1 width="500">
+			<tr>
+				<th>글 번호</th>
+				<th>사진</th>
+				<th>글 제목</th>
+				<th>작성 일</th>
+			</tr>
+			<c:forEach var="c" items="${cocktail}">
+				<tr>
+					<td>${c.idx}</td>
+					<td>${c.filename}</td>
+					<td><a href="cocktail_content.do?idx=${c.idx}">${c.title}</a></td>
+					<td>${c.regdate}</td>
+					<th><input type="button"
+						onclick="location.href='deleteCocktail.do?idx=${c.idx}'"
+						value="삭제"></th>
+				</tr>
+			</c:forEach>
+
+		</table>
+
 	</div>
 </body>
 </html>
