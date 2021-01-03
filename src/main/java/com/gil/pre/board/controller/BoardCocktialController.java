@@ -67,8 +67,7 @@ public class BoardCocktialController {
 	
 	//칵테일 글 목록보기
 	@RequestMapping(value="/cocktailList.do")
-	public String selectNotice(BoardVO vo, Model model, HttpSession session) {
-		session.setAttribute("id", vo.getId());
+	public String selectNotice(BoardVO vo, Model model) {
 		model.addAttribute("cocktail", s.selectCocktail(vo));
 		
 		return "cocktail_list.jsp";

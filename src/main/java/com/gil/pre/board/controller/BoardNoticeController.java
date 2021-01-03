@@ -66,6 +66,7 @@ public class BoardNoticeController {
 		model.addAttribute("nb", s.selectOneBoard(vo));
 		return "notice_content.jsp";
 	}
+<<<<<<< HEAD
 
 	// 공지 글 목록보기
 	@RequestMapping(value = "/noticeList.do")
@@ -73,6 +74,13 @@ public class BoardNoticeController {
 		session.setAttribute("id", vo.getId());
 		model.addAttribute("notice", s.selectBoard(vo));
 
+=======
+	
+	//공지 글 목록보기
+	@RequestMapping(value="/noticeList.do")
+	public String selectNotice(BoardVO vo, Model model) {
+		model.addAttribute("notice", s.selectBoard(vo));
+>>>>>>> 2060e3968cc38ada0691c01c72efada94f6d12c8
 		return "notice_list.jsp";
 	}
 
