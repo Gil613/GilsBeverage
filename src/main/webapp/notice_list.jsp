@@ -37,22 +37,26 @@
 				<th scope="cols" colspan=2 id="th_2">작성 일</th>
 			</tr>
 		</thead>
-	<c:forEach var="n" items="${notice}">
-		<tr>
-			<td>${n.idx}</td>
-			<td><a href="notice_content.do?idx=${n.idx}">${n.title}</a></td>
-			<td>${n.regdate}</td>
-			 <c:if test="${id eq 'master'}">
-			<td><input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제"></td>
-			</c:if>
-		</tr>
-	</c:forEach>
+		
+		<c:forEach var="n" items="${notice}">
+			<tr>
+				<td>${n.idx}</td>
+				<td><a href="notice_content.do?idx=${n.idx}">${n.title}</a></td>
+				<td>${n.regdate}</td>
+				<c:if test="${id eq 'master'}">
+					<td><input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제"></td>
+				</c:if>
+			</tr>
+		</c:forEach>
+		
 	</table>
-<form action="notice_register.jsp">
- <c:if test="${id eq 'master'}">
-	<input type="submit" value="글쓰기">
-	</c:if>
+	
+	<form action="notice_register.jsp">
+		<c:if test="${id eq 'master'}">
+			<input type="submit" value="글쓰기">
+		</c:if>
 	</form>
+	
 	</div>
 	
 </body>
