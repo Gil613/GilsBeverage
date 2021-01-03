@@ -20,7 +20,7 @@
 		<th id="th2">이름</th>
 		<th id="th3">전화번호</th>
 		<th id="th4">이메일</th>
-		<th id="th5">가입일자</th>
+		<th id="th4">가입일자</th>
 	</tr>
 	<c:forEach items="${member}" var="m">
 	<tr>
@@ -28,7 +28,7 @@
 		<th id="th2">${m.name}</th>
 		<th id="th3">${m.phone}</th>
 		<th id="th4">${m.email}</th>
-		<th id="th5">${m.regdate}</th>
+		<th id="th4">${m.regdate}</th>
 		<th>
 			<input type="button" onclick="location.href='delete.do?idx=${g.idx}'" value="삭제">&emsp;
 			<input type="button" onclick="location.href='edit.do?idx=${g.idx}'" value="수정">&emsp;

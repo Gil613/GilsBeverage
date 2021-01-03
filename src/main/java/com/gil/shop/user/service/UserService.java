@@ -1,5 +1,7 @@
 package com.gil.shop.user.service;
 
+import java.util.List;
+
 import com.gil.shop.user.vo.UserVO;
 
 public interface UserService {
@@ -8,4 +10,5 @@ public interface UserService {
 	UserVO editUser(UserVO vo);
 	void editUserOk(UserVO vo);
 	void deleteUser(UserVO vo);
+	List<UserVO> memberList(UserVO vo);
 }

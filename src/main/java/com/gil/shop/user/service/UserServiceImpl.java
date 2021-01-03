@@ -1,5 +1,7 @@
 package com.gil.shop.user.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +37,11 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void deleteUser(UserVO vo) {
 		dao.deleteUser(vo);
+	}
+	// 회원목록보기
+	@Override
+	public List<UserVO> memberList(UserVO vo) {
+		return dao.memberList(vo);
 	}
 
 }
