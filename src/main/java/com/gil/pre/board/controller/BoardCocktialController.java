@@ -22,7 +22,7 @@ public class BoardCocktialController {
 	
 	@Autowired
 	private BoardService s;
-	//공지 글쓰기
+	//칵테일 글쓰기
 	@RequestMapping(value="/insertCocktail.do")
 	public String insertNotice(BoardVO vo, HttpServletRequest request, Model model, HttpSession session) throws IOException{
 		String save="/cocktail/";
@@ -68,27 +68,28 @@ public class BoardCocktialController {
 	
 	//칵테일 글 목록보기
 	@RequestMapping(value="/cocktailList.do")
-	public String selectNotice(BoardVO vo, Model model) {
+	public String selectNotice(BoardVO vo, Model model, HttpSession session) {
+		session.setAttribute("id", vo.getId());
 		model.addAttribute("cocktail", s.selectCocktail(vo));
 		
 		return "cocktail_list.jsp";
 	}
 	
-	//공지 글 조회하기
+	//칵테일 글 조회하기
 	@RequestMapping(value="/cocktail_content.do")
 	public String selectNoticeContent(BoardVO vo, Model model) {
 		model.addAttribute("nb", s.selectOneBoard(vo));
 		return "cocktail_content.jsp";
 	}
 	
-	//공지 수정페이지 보기
+	//칵테일 수정페이지 보기
 	@RequestMapping(value="/modifyCocktail.do")
 	public String modifyNotice(BoardVO vo, Model model) {
 		model.addAttribute("c", s.selectOneBoard(vo));
 		return "notice_modify.jsp";
 	}
 	
-	//공지 수정하기
+	//칵테일 수정하기
 	@RequestMapping(value="/updateCocktail.do", method=RequestMethod.POST)
 	public String pUpdate(BoardVO vo, HttpServletRequest request) throws IOException{
 		
@@ -129,7 +130,7 @@ public class BoardCocktialController {
 		return "cocktailList.do";
 	}
 	
-	//공지 삭제하기
+	//칵테일 삭제하기
 	@RequestMapping(value="/deleteCocktail.do")
 	public String pDelete(BoardVO vo, HttpServletRequest request) {
 		
