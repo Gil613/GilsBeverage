@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="./css/tb.css">
+<link rel="stylesheet" href="./css/stylesheet.css">
 <div id=footer>
 	상호 : Gil's Beverage shop   대표자명 : 유길상   사업자등록번호 : 111-22492-95732 &emsp;
 	주소 : 서울특별시 광진구 화양동 45-17  (지하철2호선 건대입구역2번출구 도보 10분)<br>
