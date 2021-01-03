@@ -21,7 +21,9 @@
 	<c:forEach var="n" items="${notice}">
 	<tr>
 	<td>${n.idx}</td><td><a href="notice_content.do?idx=${n.idx}">${n.title}</td></td><td>${n.regdate}</td>
+	<c:if test="${id eq 'master'}">
 	<th><input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제"></th>
+	</c:if>
 	</tr>
 	</c:forEach>
 	

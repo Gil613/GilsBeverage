@@ -23,8 +23,9 @@
 	<th id="th2"><a href="content.do?idx=${w.idx}">${w.pname}</a></th>
 	<th id="th3">${w.capacity}</th>
 	<th id="th4">${w.cost}</th>
+	<c:if test="${id eq 'master'}">
 	<th><input type="button" onclick="location.href='delete.do?idx=${w.idx}'" value="삭제"></th>
-	
+	</c:if>
 	</tr>
 	</c:forEach>
 	</table>
