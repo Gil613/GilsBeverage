@@ -55,7 +55,7 @@ public class BoardCocktialController {
 				vo.setFilename(fileName);
 			}
 			}else{
-				vo.setFilename(null);
+				vo.setFilename("space.jpg");
 			}
 		session.setAttribute("id", vo.getId());
 		s.boardInsert(vo);
@@ -88,7 +88,7 @@ public class BoardCocktialController {
 	
 	//칵테일 수정하기
 	@RequestMapping(value="/updateCocktail.do", method=RequestMethod.POST)
-	public String pUpdate(BoardVO vo, HttpServletRequest request) throws IOException{
+	public String cocktailUpdate(BoardVO vo, HttpServletRequest request) throws IOException{
 		
 		BoardVO fn =s.selectOneForUpdate(vo);
 		
@@ -129,7 +129,7 @@ public class BoardCocktialController {
 	
 	//칵테일 삭제하기
 	@RequestMapping(value="/deleteCocktail.do")
-	public String pDelete(BoardVO vo, HttpServletRequest request) {
+	public String cocktailDelete(BoardVO vo, HttpServletRequest request) {
 		
 		BoardVO fn =s.selectOneForUpdate(vo);
 		
