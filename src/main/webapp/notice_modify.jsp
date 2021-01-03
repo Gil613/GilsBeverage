@@ -31,7 +31,7 @@
 		</th>
 	</tr>
 	</table>
-	<input type="submit" value="수정하기">
+	<input type="submit" value="수정완료">
 	</form>
 	</div>
 </body>
