@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<form action="">
+
 	<div align="center" id=body>
 	<div id="title">
 	<table>
@@ -48,10 +48,13 @@
 		</tr>
 	</c:forEach>
 	</table>
-
+<form action="notice_register.jsp">
+ <c:if test="${id eq 'master'}">
 	<input type="submit" value="글쓰기">
-	</div>
+	</c:if>
 	</form>
+	</div>
+	
 </body>
 </html>
 

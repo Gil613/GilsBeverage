@@ -15,7 +15,7 @@
 	<h2>칵테일 수정</h2><br>
 	<table>
 	<tr><th>${c.title}<hr></th></tr>
-	<tr><th><c:if test="${c.filename ne null}"><img id="img_edit" src="./cocktail/${c.filename}" /></c:if>
+	<tr><th><c:if test="${c.filename ne 'space.jpg'}"><img id="img_edit" src="./cocktail/${c.filename}" /></c:if>
 	<br>
 	${c.content}</th></tr>
 	</table>

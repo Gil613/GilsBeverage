@@ -13,7 +13,7 @@
 <body>
 	<div align="center" id=body>
 		<h2>칵테일 게시판</h2>
-		<br> <a href="cocktail_register.jsp">글쓰기</a>
+		<br><c:if test="${id eq 'master'}"> <a href="cocktail_register.jsp">글쓰기</a></c:if>
 		<table border=1 width="500">
 			<tr>
 				<th>글 번호</th>
@@ -24,7 +24,7 @@
 			<c:forEach var="c" items="${cocktail}">
 				<tr>
 					<td>${c.idx}</td>
-					<td><img id="img" src="./cocktail/${c.filename}"/></td>
+					<td><c:if test="${c.filename ne 'space.jpg'}"><img id="img" src="./cocktail/${c.filename}"/></c:if></td>
 					<td><a href="cocktail_content.do?idx=${c.idx}">${c.title}</a></td>
 					<td>${c.regdate}</td>
 			<c:if test="${id eq 'master'}">		
