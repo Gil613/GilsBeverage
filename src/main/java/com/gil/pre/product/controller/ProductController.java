@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.gil.shop.product.service.ProductService;
 import com.gil.shop.product.vo.ProductVO;
+import com.gil.shop.user.vo.UserVO;
 
 @Controller
 public class ProductController {
@@ -121,38 +123,44 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value="/whisky.do")
-	public String whisky(ProductVO vo, Model model) {
-		model.addAttribute("whisky", s.whisky(vo));
+	public String whisky(ProductVO pvo, UserVO uvo, Model model, HttpSession session) {
+		session.setAttribute("id", uvo.getId());
+		model.addAttribute("whisky", s.whisky(pvo));
 		return "whisky_list.jsp";
 	}
 	
 	@RequestMapping(value="/vodka.do")
-	public String vodka(ProductVO vo, Model model) {
-		model.addAttribute("vodka", s.vodka(vo));
+	public String vodka(ProductVO pvo, UserVO uvo, Model model, HttpSession session) {
+		session.setAttribute("id", uvo.getId());
+		model.addAttribute("vodka", s.vodka(pvo));
 		return "vodka_list.jsp";
 	}
 	
 	@RequestMapping(value="/brandy.do")
-	public String brandy(ProductVO vo, Model model) {
-		model.addAttribute("brandy", s.brandy(vo));
+	public String brandy(ProductVO pvo, UserVO uvo, Model model, HttpSession session) {
+		session.setAttribute("id", uvo.getId());
+		model.addAttribute("brandy", s.brandy(pvo));
 		return "brandy_list.jsp";
 	}
 	
 	@RequestMapping(value="/tequila.do")
-	public String tequila(ProductVO vo, Model model) {
-		model.addAttribute("tequila", s.tequila(vo));
+	public String tequila(ProductVO pvo, UserVO uvo, Model model, HttpSession session) {
+		session.setAttribute("id", uvo.getId());
+		model.addAttribute("tequila", s.tequila(pvo));
 		return "tequila_list.jsp";
 	}
 	
 	@RequestMapping(value="/gin.do")
-	public String gin(ProductVO vo, Model model) {
-		model.addAttribute("gin", s.gin(vo));
+	public String gin(ProductVO pvo, UserVO uvo, Model model, HttpSession session) {
+		session.setAttribute("id", uvo.getId());
+		model.addAttribute("gin", s.gin(pvo));
 		return "gin_list.jsp";
 	}
 	
 	@RequestMapping(value="/lw.do")
-	public String lw(ProductVO vo, Model model) {
-		model.addAttribute("lw", s.lw(vo));
+	public String lw(ProductVO pvo, UserVO uvo, Model model, HttpSession session) {
+		session.setAttribute("id", uvo.getId());
+		model.addAttribute("lw", s.lw(pvo));
 		return "lw_list.jsp";
 	}
 	
