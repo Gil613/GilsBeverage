@@ -57,7 +57,7 @@ delete gil_board where idx=${idx}
 
 <!-- 칵테일 SQL -->
   <!-- 칵테일 글 등록 --> 
-<insert id="insertNotice">
+<insert id="insertCocktail">
 	 <![CDATA[
        insert  into gil_board ( idx, id, filename, title, content, flag )    
        values ( (select nvl(max(idx), 0)+1 from gil_board), #{id}, #{filename} ,#{title} ,#{content} ,#{flag} )
