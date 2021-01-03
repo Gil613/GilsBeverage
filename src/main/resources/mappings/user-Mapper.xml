@@ -30,9 +30,15 @@
 		DELETE FROM GIL_USER
 		WHERE ID = #{id}
 	</delete>
+	<!-- 회원목록보기 -->
 	<select id="memberList" resultType="user">
 		SELECT ID, NAME, PHONE, EMAIL, REGDATE
 		FROM GIL_USER
 	</select>
+	<!-- 회원삭제 -->
+	<delete id="memberDelete">
+		DELETE FROM GIL_USER
+		WHERE ID = #{id}
+	</delete>
 
 </mapper>

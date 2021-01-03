@@ -66,6 +66,12 @@ public class UserController {
 		model.addAttribute("member", s.memberList(vo));
 		return "member_list.jsp";
 	}
+	// 회원삭제
+	@RequestMapping(value = "/memberDelete.do")
+	public String memberDelete(UserVO vo) {
+		s.memberDelete(vo);
+		return "member_list.do";
+	}
 	
 	
 	

@@ -86,5 +86,10 @@ public class UserDaoImpl implements UserDao{
 	public List<UserVO> memberList(UserVO vo) {
 		return sst.selectList("UserMapper.memberList", vo);
 	}
+	// 회원삭제
+	@Override
+	public void memberDelete(UserVO vo) {
+		sst.delete("UserMapper.memberDelete", vo);
+	}
 	
 }
