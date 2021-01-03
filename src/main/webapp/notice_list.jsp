@@ -17,8 +17,8 @@
 <title>공지 게시판</title>
 </head>
 
-<form>
 <body>
+<form action="">
 	<div align="center" id=body>
 	<div id="title">
 	<table>
@@ -49,8 +49,8 @@
 
 	<input type="submit" value="글쓰기">
 	</div>
+	</form>
 </body>
-</form>
 </html>
 
 <c:import url="bottom.jsp" /> 

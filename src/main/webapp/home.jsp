@@ -19,11 +19,15 @@
 	  <div align="center">	
 		<table class="table_0">
 			<tr>
-				<td id="td_1">Vodka</td><td>Whisky</td><td>Brandy</td>
+				<td id="td_1"><a href="vodka.do">Vodka</a></td>
+				<td><a href="whisky.do">Whisky</a></td>
+				<td><a href="brandy.do">Brandy</a></td>
 			</tr>
 
 			<tr>
-				<td>Tequila</td><td>Gin</td><td>Liquor/Wine</td>
+				<td><a href="tequila.do">Tequila</a></td>
+				<td><a href="gin.do">Gin</a></td>
+				<td><a href="lw.do">Liquor/Wine</a></td>
 			</tr>
 		</table>
 	  </div>	
