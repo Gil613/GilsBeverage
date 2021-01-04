@@ -7,4 +7,11 @@
 		INSERT  INTO GIL_SCRAP (IDX, ID, PNAME) 
 			VALUES ((SELECT NVL(MAX(IDX), 0)+1 FROM GIL_SCRAP),#{id},#{pname})
 	</insert>
+	<!-- 스크랩목록보기 -->
+	<select id="scrapList" resultType="scrap">
+		SELECT * 
+		FROM GIL_SCRAP
+		WHERE ID=#{id}
+	</select>
+	
 </mapper>

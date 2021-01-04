@@ -17,6 +17,7 @@
 	<a href="communityList.do">커뮤니티</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<c:if test="${id != null}">
 		<a href="editUser.do">회원정보수정</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<a href="scrapList.do">스크랩보기</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<a href="logout.do">${id}님 로그아웃</a>
 	</c:if>
 	<c:if test="${id == null}">
