@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div id="title" align="center">Liquor/Wine List</div><br>
+	<div id="title" align="center">Gin List</div><br>
 	<div align="center" id=body>
 	<table class="table_0">
 

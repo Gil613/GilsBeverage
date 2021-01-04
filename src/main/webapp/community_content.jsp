@@ -12,7 +12,7 @@
 
 <body>
 	<div align="center" id=body>
-	<h2>칵테일 수정</h2><br>
+	<h2>커뮤니티 글 보기</h2><br>
 	<table>
 	<tr><th>${c.title}<hr></th></tr>
 	<tr><th><c:if test="${c.filename ne null}"><img id="img_edit" src="./cocktail/${c.filename}" /></c:if>
@@ -22,7 +22,7 @@
 	<c:if test="${id eq 'master'}">
 		<a href="modifyCocktail.do?idx=${c.idx}">수정하기</a>
 	</c:if>
-	<a href="cocktailList.do">목록보기</a>
+	<a href="communityList.do">목록보기</a>
 	</div>
 </body>
 </html>
