@@ -27,7 +27,7 @@
 					<td><img id="img" src="./cocktail/${c.filename}"/></td>
 					<td><a href="cocktail_content.do?idx=${c.idx}">${c.title}</a></td>
 					<td>${c.regdate}</td>
-			<c:if test="${id eq 'master'}">		
+			<c:if test="${id ne 'master'}">		
 					<th><input type="button"
 						onclick="location.href='deleteCocktail.do?idx=${c.idx}'"
 						value="삭제"></th>
