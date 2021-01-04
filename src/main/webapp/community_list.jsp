@@ -17,6 +17,7 @@
 		<table border=1 width="500">
 			<tr>
 				<th>글 번호</th>
+				<th>작성자</th>
 				<th>사진</th>
 				<th>글 제목</th>
 				<th>작성 일</th>

@@ -76,7 +76,8 @@ public class BoardCommunityController {
 	
 	//커뮤니티 글 조회하기
 	@RequestMapping(value="/community_content.do")
-	public String selectCommunityContent(BoardVO vo, Model model) {
+	public String selectCommunityContent(BoardVO vo,UserVO uvo, Model model, HttpSession session) {
+		uvo.setId((String)session.getAttribute("id"));
 		model.addAttribute("c", s.selectOneBoard(vo));
 		return "community_content.jsp";
 	}
