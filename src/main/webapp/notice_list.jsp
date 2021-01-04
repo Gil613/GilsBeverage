@@ -34,7 +34,7 @@
 			<tr>
 				<th scope="cols" id="th_0">글 번호</th>
 				<th scope="cols" id="th_1">글 제목</th>
-				<th scope="cols" colspan=2 id="th_2">작성 일</th>
+				<th scope="cols" id="th_2">작성 일</th>
 			</tr>
 		</thead>
 		
@@ -42,10 +42,11 @@
 			<tr>
 				<td>${n.idx}</td>
 				<td><a href="notice_content.do?idx=${n.idx}">${n.title}</a></td>
-				<td>${n.regdate}</td>
+				<td>${n.regdate}
 				<c:if test="${id eq 'master'}">
-					<td><input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제"></td>
+					&emsp;<input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제">
 				</c:if>
+				</td>
 			</tr>
 		</c:forEach>
 		
