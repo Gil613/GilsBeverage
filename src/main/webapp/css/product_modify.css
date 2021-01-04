@@ -53,8 +53,9 @@ table.table_0 td{
 	padding-right:15px;
 }
 
-input[type=file] {
-	
+#img {
+	width:80px;
+	height:50px;
 }
 
 input[type=submit] {
