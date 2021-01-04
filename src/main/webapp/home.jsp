@@ -14,8 +14,11 @@
 	a:visited { color:black }
 </style> 
 
-	<div id=search_text>
-		검색하기
+	<div>
+		<form action="searchList.do">
+<input  type="text"  name="search"> 
+<input  type="submit"  value="검색하기" >
+</form>
 	</div>
 	  <div align="center">	
 		<table class="table_0">

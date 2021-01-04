@@ -9,7 +9,15 @@ public class UserVO {
 	  private String phone;
 	  private String email;
 	  private String regdate;
+	  private String search;
 	  
+	  
+	public String getSearch() {
+		return search;
+	}
+	public void setSearch(String search) {
+		this.search = search;
+	}
 	public String getId() {
 		return id;
 	}
@@ -62,7 +70,7 @@ public class UserVO {
 	@Override
 	public String toString() {
 		return "UserVO [id=" + id + ", pwd=" + pwd + ", p_sha256=" + p_sha256 + ", p_bcrypt=" + p_bcrypt + ", name="
-				+ name + ", phone=" + phone + ", email=" + email + ", regdate=" + regdate + "]";
+				+ name + ", phone=" + phone + ", email=" + email + ", regdate=" + regdate + ", search=" + search + "]";
 	}
 	
 	
