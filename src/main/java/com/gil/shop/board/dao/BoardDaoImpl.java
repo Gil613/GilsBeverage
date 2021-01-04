@@ -57,5 +57,10 @@ public class BoardDaoImpl implements BoardDao{
 	public List<BoardVO> selectCocktail(BoardVO vo) {
 		return sst.selectList("BoardDAO.selectCocktail", vo);
 	}
+
+	@Override
+	public List<BoardVO> selectCommunity(BoardVO vo) {
+		return sst.selectList("BoardDAO.selectCommunity", vo);
+	}
 	
 }
