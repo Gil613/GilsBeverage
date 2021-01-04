@@ -7,21 +7,43 @@
 <head>
 <link rel="stylesheet" href="./css/join.css">
 <meta charset="UTF-8">
-
 <style>
 	input::placeholder {
 		direction: ltr;
 	}
+	.swal-button 
+	{
+		background-color: #FFB2D9;
+		font-size: 12px;
+		text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+	}
 </style>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <title>Insert title here</title>
 </head>
+<script>
+	function functionK(){
+	     if (f1.id.value=="") {
+	    	swal("ID는 필수입력!", "아이디는 필수입력입니다.", "error");
+	    	f1.id.value="";
+	        f1.id.focus(); 
+	        return  false ;
+	     }
+	
+	     if (f1.pwd.value.length < 4) {
+	        swal("비밀번호가 너무 짧아요! ", "비밀번호는 4자이상 입력해주세요", "error");
+	        f1.pwd.value="";
+	        f1.pwd.focus(); 
+	        return  false ;
+	     }
+	  }
+</script>
 <body>
 <div align="center">
 <div id="text1">회원가입</div>
 <hr id="hr">
 <div>
-<form method="post" name="f1" action="join.do">
+<form method="post" action="join.do" name="f1" onSubmit="return functionK();">
 	<table class="t_1">
 		<tr>
 			<th id="text2">아이디</th>
