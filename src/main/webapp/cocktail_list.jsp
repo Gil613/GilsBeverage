@@ -35,7 +35,6 @@
 					<th scope="cols" colspan=2 id="th_3">작성 일</th>
 				</tr>
 			</thead>
-			
 			<c:forEach var="c" items="${cocktail}">
 				<tr>
 					<td>${c.idx}</td>
