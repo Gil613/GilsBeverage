@@ -14,20 +14,28 @@
 <body>
 
 	<div align="center" id="body">
-	<div id="title">주류 등록</div><br>
 		<form action="insert.do" method="post" enctype="multipart/form-data">
+		<br><br>
 		<table class="table_0">
+			
+			<thead>
+				<tr>
+					<th scope="cols" colspan="2">주류 등록</th>
+				</tr>
+			</thead>
+			
+			<tbody>
 			<tr>
-				<td id="table_text_0">사진</td>
+				<th scope="row">사진</th>
 				<td>
 					<input type="file" name="uploadFile">
 				</td>
 			</tr>
 			
 			<tr>
-				<td id="table_text_1">
+				<th scope="row">
 					이름
-				</td>
+				</th>
 				<td>
 					<select name="ptype">
 						<option value="보드카">보드카</option>
@@ -41,11 +49,21 @@
 				</td>
 			</tr>
 			
-			<tr><td id="table_text_2">내용</td><td><textarea name="pcontent" cols=40 rows=10></textarea></td></tr>
+			<tr>
+				<th scope="row">내용</th>
+				<td><textarea name="pcontent" cols=40 rows=10></textarea></td>
+			</tr>
 			
-			<tr><td id="table_text_3">용량</td><td><input type="text" name="capacity">ml</td></tr>
+			<tr>
+				<th scope="row">용량</th>
+				<td><input type="text" name="capacity">ml</td>
+			</tr>
 			
-			<tr><td id="table_text_4">가격</td><td><input type="text" name="cost">원</td></tr>
+			<tr>
+				<th scope="row">가격</th>
+				<td><input type="text" name="cost">원</td>
+			</tr>
+			</tbody>
 		</table>
 		<input type="submit" value="상품 등록">
 		</form>
