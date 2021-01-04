@@ -11,6 +11,15 @@ public class ProductVO {
 	private String ptype;
 	private String capacity;
 	private String cost;
+	private String search;
+	
+	
+	public String getSearch() {
+		return search;
+	}
+	public void setSearch(String search) {
+		this.search = search;
+	}
 	public MultipartFile getUploadFile() {
 		return uploadFile;
 	}
@@ -62,7 +71,8 @@ public class ProductVO {
 	@Override
 	public String toString() {
 		return "ProductVO [uploadFile=" + uploadFile + ", idx=" + idx + ", filename=" + filename + ", pname=" + pname
-				+ ", pcontent=" + pcontent + ", ptype=" + ptype + ", capacity=" + capacity + ", cost=" + cost + "]";
+				+ ", pcontent=" + pcontent + ", ptype=" + ptype + ", capacity=" + capacity + ", cost=" + cost
+				+ ", search=" + search + "]";
 	}
 	
 	

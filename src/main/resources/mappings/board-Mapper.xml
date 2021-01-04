@@ -78,4 +78,11 @@ delete gil_board where idx=${idx}
     ]]>
 </select>
 
+<!-- 게시판 검색용 -->
+<select id="selectSearch" resultType="board">
+<![CDATA[
+       select * from gil_board where title like '%'||#{search}||'%' or content like '%'||#{search}||'%'
+    ]]>
+</select>
+
 </mapper>

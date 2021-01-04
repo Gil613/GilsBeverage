@@ -11,6 +11,15 @@ public class BoardVO {
 	 private String title;
 	 private String content;
 	 private String flag;
+	 private String search;
+	 
+	 
+	public String getSearch() {
+		return search;
+	}
+	public void setSearch(String search) {
+		this.search = search;
+	}
 	public MultipartFile getUploadFile() {
 		return uploadFile;
 	}
@@ -62,7 +71,8 @@ public class BoardVO {
 	@Override
 	public String toString() {
 		return "BoardVO [uploadFile=" + uploadFile + ", idx=" + idx + ", id=" + id + ", filename=" + filename
-				+ ", regdate=" + regdate + ", title=" + title + ", content=" + content + ", flag=" + flag + "]";
+				+ ", regdate=" + regdate + ", title=" + title + ", content=" + content + ", flag=" + flag + ", search="
+				+ search + "]";
 	}
 	 
 	 
