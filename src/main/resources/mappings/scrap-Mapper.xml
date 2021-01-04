@@ -13,5 +13,11 @@
 		FROM GIL_SCRAP
 		WHERE ID=#{id}
 	</select>
+	<!-- 스크랩삭제하기 -->
+	<delete id="scrapDelete">
+		DELETE 
+		FROM GIL_SCRAP
+		WHERE IDX = #{idx}
+	</delete>
 	
 </mapper>

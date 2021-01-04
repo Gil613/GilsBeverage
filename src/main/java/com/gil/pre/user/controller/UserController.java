@@ -82,10 +82,16 @@ public class UserController {
 	}
 	// 스크랩보기
 	@RequestMapping(value = "/scrapList.do")
-	public String scraptList(ScrapVO vo, HttpSession session, Model model) {
+	public String scrapList(ScrapVO vo, HttpSession session, Model model) {
 		vo.setId((String)session.getAttribute("id"));
 		model.addAttribute("scrap", s.scrapList(vo));
 		return "scrapList.jsp";
+	}
+	// 스크랩삭제하기
+	@RequestMapping(value = "/scrapDelete.do")
+	public String scrapDelete(ScrapVO vo) {
+		s.scrapDelete(vo);
+		return "scrapList.do";
 	}
 	
 	
