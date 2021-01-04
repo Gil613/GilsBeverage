@@ -14,4 +14,5 @@ public interface UserService {
 	List<UserVO> memberList(UserVO vo);
 	void memberDelete(UserVO vo);
 	void scrapInsert(ScrapVO vo);
+	List<ScrapVO> scrapList(ScrapVO vo);
 }

@@ -80,6 +80,13 @@ public class UserController {
 		s.scrapInsert(vo);
 		return "home.jsp";
 	}
+	// 스크랩보기
+	@RequestMapping(value = "/scrapList.do")
+	public String scraptList(ScrapVO vo, HttpSession session, Model model) {
+		vo.setId((String)session.getAttribute("id"));
+		model.addAttribute("scrap", s.scrapList(vo));
+		return "scrapList.jsp";
+	}
 	
 	
 }

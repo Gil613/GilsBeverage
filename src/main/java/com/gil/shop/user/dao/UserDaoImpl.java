@@ -97,5 +97,10 @@ public class UserDaoImpl implements UserDao{
 	public void scrapInsert(ScrapVO vo) {
 		sst.insert("scrapmapper.scrapInsert", vo);
 	}
+	// 스크랩목록보기
+	@Override
+	public List<ScrapVO> scrapList(ScrapVO vo) {
+		return sst.selectList("scrapmapper.scrapList", vo);
+	}
 	
 }
