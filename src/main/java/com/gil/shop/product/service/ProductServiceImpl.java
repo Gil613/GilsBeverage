@@ -16,7 +16,6 @@ public class ProductServiceImpl implements ProductService{
 	
 	@Override
 	public void pinsert(ProductVO vo) {
-		System.out.println("서비스 통과");
 		dao.pinsert(vo);
 	}
 
@@ -78,6 +77,12 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public void pdelete(ProductVO vo) {
 		dao.pdelete(vo);
+	}
+
+	@Override
+	public List<ProductVO> searchProductList(ProductVO vo) {
+		
+		return dao.searchProductList(vo);
 	}
 
 }

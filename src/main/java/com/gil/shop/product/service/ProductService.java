@@ -16,4 +16,5 @@ public interface ProductService {
 	List<ProductVO> lw(ProductVO vo);
 	ProductVO selectOne(ProductVO vo);
 	ProductVO selectForUpdate(ProductVO vo);
+	List<ProductVO> searchProductList(ProductVO vo);
 }

@@ -89,5 +89,11 @@ select filename from gil_product where idx=#{idx}
 	]]>
 </delete>
 
+<!-- 상품 검색 -->
+<select id="selectSearchProduct" resultType="product">
+<![CDATA[
+       select * from gil_product where pname like '%'||#{search}||'%' or ptype like '%'||#{search}||'%'
+    ]]>
+</select>
 
 </mapper>

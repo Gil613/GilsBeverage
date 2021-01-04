@@ -79,4 +79,9 @@ public class ProductDaoImpl implements ProductDao{
 		
 	}
 
+	@Override
+	public List<ProductVO> searchProductList(ProductVO vo) {
+		return sst.selectList("ProductDAO.selectSearchProduct", vo);
+	}
+
 }
