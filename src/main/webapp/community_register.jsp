@@ -17,7 +17,7 @@
 	<div id="title">칵테일 등록</div><br>
 		<form action="insertCommunity.do" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="flag" value="community">
-		<input type="text" name="id" id="id" value="${sessionScope.id}">
+		<input type="hidden" name="id" id="id" value="${sessionScope.id}">
 		
 		<table class="table_0">
 			<tr><td id="table_text_0">사진</td><td><input type="file" name="uploadFile"></td></tr>
