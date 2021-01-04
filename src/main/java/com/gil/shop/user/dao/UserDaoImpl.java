@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.gil.shop.scrap.vo.ScrapVO;
 import com.gil.shop.user.vo.UserVO;
 
 @Repository
@@ -90,6 +91,11 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public void memberDelete(UserVO vo) {
 		sst.delete("UserMapper.memberDelete", vo);
+	}
+	// 스크랩하기
+	@Override
+	public void scrapInsert(ScrapVO vo) {
+		sst.insert("scrapmapper.scrapInsert", vo);
 	}
 	
 }

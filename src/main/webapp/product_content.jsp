@@ -29,7 +29,10 @@
 				</tr>
 			</table>
 			<c:if test="${id eq 'master'}">
-			<a href="modify.do?idx=${p.idx}"><input type="button" value="수정하기"></a>
+				<a href="modify.do?idx=${p.idx}"><input type="button" value="수정하기"></a>
+			</c:if>
+			<c:if test="${id != null}">
+			<a href="scrap.do?pname=${p.pname}">스크랩하기</a>
 			</c:if>
 	</div>
 </body>

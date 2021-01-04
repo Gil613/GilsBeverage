@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.gil.shop.scrap.vo.ScrapVO;
 import com.gil.shop.user.dao.UserDao;
 import com.gil.shop.user.vo.UserVO;
 
@@ -43,9 +44,15 @@ public class UserServiceImpl implements UserService{
 	public List<UserVO> memberList(UserVO vo) {
 		return dao.memberList(vo);
 	}
+	// 회원삭제하기
 	@Override
 	public void memberDelete(UserVO vo) {
 		dao.memberDelete(vo);
+	}
+	// 스크랩하기
+	@Override
+	public void scrapInsert(ScrapVO vo) {
+		dao.scrapInsert(vo);
 	}
 
 }
