@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.gil.shop.scrap.vo.ScrapVO;
 import com.gil.shop.user.service.UserService;
 import com.gil.shop.user.vo.UserVO;
 
@@ -72,7 +73,13 @@ public class UserController {
 		s.memberDelete(vo);
 		return "member_list.do";
 	}
-	
+	// 스크랩하기
+	@RequestMapping(value = "/scrap.do")
+	public String scrapInsert(ScrapVO vo, HttpSession session) {
+		vo.setId((String)session.getAttribute("id"));
+		s.scrapInsert(vo);
+		return "home.jsp";
+	}
 	
 	
 }

@@ -10,15 +10,17 @@
 </settings>
 
  <typeAliases>
-     <typeAlias type="com.gil.shop.product.vo.ProductVO"   alias="product" />
+      <typeAlias type="com.gil.shop.product.vo.ProductVO"   alias="product" />
       <typeAlias type="com.gil.shop.user.vo.UserVO"   alias="user" />
       <typeAlias type="com.gil.shop.board.vo.BoardVO"   alias="board" />
+      <typeAlias type="com.gil.shop.scrap.vo.ScrapVO"   alias="scrap" />
  </typeAliases>
   
  <mappers>
-  <mapper resource="mappings/product-Mapper.xml" />
+  	<mapper resource="mappings/product-Mapper.xml" />
     <mapper resource="mappings/user-Mapper.xml" />
     <mapper resource="mappings/board-Mapper.xml" />
+    <mapper resource="mappings/scrap-Mapper.xml" />
  </mappers>
  
 </configuration>
