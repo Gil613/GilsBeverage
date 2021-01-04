@@ -1,11 +1,12 @@
 @charset "utf-8";
 
-#body{
-	font-family:arial;	
+
+table.table {
+	border:1px solid white;
 }
 
-#title {
-	margin-bottom:0px;
+#body{
+	font-family:arial;	
 }
 
 #t1 {
@@ -24,7 +25,7 @@ table.table_0 {
   border-spacing: 1px;
   text-align: center;
   line-height: 1.5;
-  margin: 0px 10px;
+  margin-bottom:180px;
 }
 
 table.table_0 th{
