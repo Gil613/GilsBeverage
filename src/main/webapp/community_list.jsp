@@ -13,7 +13,7 @@
 <body>
 	<div align="center" id=body>
 		<h2>커뮤니티 게시판</h2>
-		<br> <a href="cocktail_register.jsp">글쓰기</a>
+		<br> <a href="community_register.jsp">글쓰기</a>
 		<table border=1 width="500">
 			<tr>
 				<th>글 번호</th>
@@ -29,9 +29,10 @@
 					<td><img id="img" src="./cocktail/${c.filename}"/></td>
 					<td><a href="community_content.do?idx=${c.idx}">${c.title}</a></td>
 					<td>${c.regdate}</td>
-			<c:if test="${id ne 'master'}">		
-					<th><input type="button"
-						onclick="location.href='deleteCocktail.do?idx=${c.idx}'"
+			<c:if test="${c.id eq id || id eq 'master'}">
+					<th>
+					<input type="button"
+						onclick="location.href='deleteCommunity.do?idx=${c.idx}'"
 						value="삭제"></th>
 			</c:if>
 				</tr>
