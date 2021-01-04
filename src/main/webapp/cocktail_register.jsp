@@ -15,7 +15,7 @@
 
 	<div align="center" id="body">
 		<form action="insertCocktail.do" method="post" enctype="multipart/form-data">
-		<input type="hidden" name="flag" value="cocktail">
+		<input type="hidden" name="flag" value="community">
 		<input type="hidden" name="id" value="master">
 		<table class="table_0">
 			<thead>
