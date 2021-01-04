@@ -2,6 +2,7 @@ package com.gil.shop.product.dao;
 
 import java.util.List;
 
+import com.gil.shop.board.vo.BoardVO;
 import com.gil.shop.product.vo.ProductVO;
 
 public interface ProductDao {
@@ -16,5 +17,5 @@ public interface ProductDao {
 	List<ProductVO> lw(ProductVO vo);
 	ProductVO selectOne(ProductVO vo);
 	ProductVO selectForUpdate(ProductVO vo);
-	
+	List<ProductVO> searchProductList(ProductVO vo);
 }

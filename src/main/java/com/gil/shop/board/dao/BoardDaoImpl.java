@@ -65,7 +65,6 @@ public class BoardDaoImpl implements BoardDao{
 
 	@Override
 	public List<BoardVO> searchNoticeList(BoardVO vo) {
-		
 		return sst.selectList("BoardDAO.selectSearchNotice", vo);
 	}
 
