@@ -14,12 +14,13 @@
 	<div id="outline" align="center">
 		<br>
 			<table class="table_0">
-				<tr>
-					<th rowspan=4><img id="img_edit" src="./product/${p.filename}" /></th>
+				<tr
+				>
+					<th id="img_bgc" rowspan=4><img id="img_edit" src="./product/${p.filename}" /></th>
 					<th id="text_0">${p.pname}</th>
 				</tr>
 				<tr>
-					<th id="text_1">${p.capacity}</th>
+					<th id="text_1">${p.capacity}ml</th>
 				</tr>
 				<tr>
 					<th id="text_2">${p.cost} 원</th>

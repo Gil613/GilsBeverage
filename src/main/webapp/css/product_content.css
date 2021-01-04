@@ -1,17 +1,16 @@
 @charset "UTF-8";
 
 #outline {
-	padding-top:0px;
+	padding-top:60px;
 }
 
 table.table_0 {
-	width:1000px;
-	height:400px;
 	text-align:left;
+	border:1px solid white;
 }
 
+
 #img_edit {
-	padding-top:60px;
 	width:400px;
 	height:600px;
 }
@@ -23,12 +22,13 @@ table.table_0 {
 	padding-left:60px;
 	padding-bottom:15px;
 	width:50px;
+	color:#380328;
 }
 
 #text_1 {
 	font-family:arial;
 	font-size:20px;
-	color:#5c5c5c;
+	color:black;
 	padding-right:200px;
 	padding-left:60px;
 	padding-bottom:15px;
@@ -38,7 +38,7 @@ table.table_0 {
 #text_2 {
 	font-family:arial;
 	font-size:20px;
-	color:#5c5c5c;
+	color:black;
 	padding-right:200px;
 	padding-left:60px;
 	padding-bottom:30px;
@@ -46,9 +46,11 @@ table.table_0 {
 
 
 #textarea {
+	border:1px solid white;
 	font-family:arial;
 	font-size:20px;
-	color:#5c5c5c;
+	color:black;
+	vertical-align:top;
 	padding-right:150px;
 	padding-left:60px;
 	padding-bottom:0px;
