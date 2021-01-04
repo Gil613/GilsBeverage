@@ -39,7 +39,7 @@ public class BoardVO {
 		return regdate;
 	}
 	public void setRegdate(String regdate) {
-		this.regdate = regdate;
+		this.regdate = regdate.substring(0, 10);
 	}
 	public String getTitle() {
 		return title;
