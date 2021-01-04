@@ -59,5 +59,10 @@ public class UserServiceImpl implements UserService{
 	public List<ScrapVO> scrapList(ScrapVO vo) {
 		return dao.scrapList(vo);
 	}
+	// 스크랩삭제하기
+	@Override
+	public void scrapDelete(ScrapVO vo) {
+		dao.scrapDelete(vo);
+	}
 
 }

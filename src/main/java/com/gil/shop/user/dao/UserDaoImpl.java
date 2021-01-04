@@ -102,5 +102,10 @@ public class UserDaoImpl implements UserDao{
 	public List<ScrapVO> scrapList(ScrapVO vo) {
 		return sst.selectList("scrapmapper.scrapList", vo);
 	}
+	// 스크랩삭제하기
+	@Override
+	public void scrapDelete(ScrapVO vo) {
+		sst.delete("scrapmapper.scrapDelete", vo);
+	}
 	
 }

@@ -30,7 +30,7 @@
 				<td id="th8">${m.pname}</td>
 				<td id="th9">${m.regdate}</td>
 				<td>
-					<input type="button" onclick="location.href='memberDelete.do?id=${m.id}'" value="삭제">&emsp;
+					<input type="button" onclick="location.href='scrapDelete.do?idx=${m.idx}'" value="삭제">&emsp;
 				</td>
 			</tr>
 		</c:forEach>

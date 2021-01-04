@@ -15,6 +15,7 @@ public interface UserDao {
 	void memberDelete(UserVO vo);
 	void scrapInsert(ScrapVO vo);
 	List<ScrapVO> scrapList(ScrapVO vo);
+	void scrapDelete(ScrapVO vo);
 
 
 }
