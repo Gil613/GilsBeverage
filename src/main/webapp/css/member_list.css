@@ -13,15 +13,21 @@
 
 table.table_0 {
 	font-size:15px;
-	border:1px solid black;
+	border-collapse:spacing;
+	border-spacing:0px;
+	border:1px solid #524e3c;
 }
 
 table.table_0 th{
-	border:1px solid black;
+	border:1px solid #524e3c;
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color:#524e3c;
+	color:white;
 }
 
 table.table_0 td{
-	border:1px solid black;
+	border:1px solid #524e3c;
 }
 
 #th1 {

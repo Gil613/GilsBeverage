@@ -14,25 +14,35 @@
 <body>
 
 	<div align="center" id="body">
-	<div id="title">공지 등록</div><br>
 		<form action="insertNotice.do" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="flag" value="notice">
 		<input type="hidden" name="id" value="master">
 		<table class="table_0">
-			<tr><td id="table_text_0">사진</td><td><input type="file" name="uploadFile"></td></tr>
+			<thead>
+				<tr>
+					<th colspan="2">공지사항 등록</th>
+				</tr>
+			</thead>
+			<tr>
+			<th scope="cols">사진</th>
+			<td><input type="file" name="uploadFile"></td>
+			</tr>
 			
 			<tr>
-			<td id="table_text_1">제목</td>
+			<th scope="cols">제목</th>
 			<td>
 			<input type="text" name="title">
 			</td>
 			</tr>
 			
-			<tr><td id="table_text_2">내용</td><td><textarea name="content" cols=40 rows=10></textarea></td></tr>
-			
-			
-			<tr><td align="center" colspan="2"><input type="submit" value="글 등록"></td></tr>
+			<tr>
+			<th scope="cols">내용</th>
+			<td><textarea name="content" cols=40 rows=10></textarea></td>
+			</tr>
 		</table>
+		
+		<input type="submit" value="글 등록">
+		
 		</form>
 	</div>
 </body>
