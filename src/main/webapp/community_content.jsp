@@ -19,8 +19,8 @@
 	<br>
 	${c.content}</th></tr>
 	</table>
-	<c:if test="${id eq 'master'}">
-		<a href="modifyCocktail.do?idx=${c.idx}">수정하기</a>
+	<c:if test="${c.id eq id}">
+		<a href="modifyCommunity.do?idx=${c.idx}">수정하기</a>
 	</c:if>
 	<a href="communityList.do">목록보기</a>
 	</div>

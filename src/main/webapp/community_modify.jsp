@@ -13,7 +13,7 @@
 <body>
 	<div align="center" id=body>
 	<h2>칵테일 글 수정</h2><br>
-	<form action="updateCocktail.do" method="post" enctype="multipart/form-data">
+	<form action="updateCommunity.do" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="idx" value="${c.idx}">	
 	<table>
 	<tr>
@@ -24,7 +24,8 @@
 	</tr>
 	<tr>
 		<th>
-			<img id="img_edit" src="./cocktail/${c.filename}" name="filename"/>
+		
+			<img id="img_edit" src="./community/${c.filename}" name="filename"/>
 			<input type="file" name="uploadFile" >
 			<br>
 			<textarea name="content" cols=40 rows=10>${c.content}</textarea>
