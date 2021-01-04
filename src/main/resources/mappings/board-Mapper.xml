@@ -71,4 +71,11 @@ delete gil_board where idx=${idx}
     ]]>
 </select>
 
+ <!-- 커뮤니티 글 목록 -->
+<select id="selectCommunity" resultType="board">
+<![CDATA[
+       select idx, id, filename, title, regdate from gil_board where flag='community'
+    ]]>
+</select>
+
 </mapper>

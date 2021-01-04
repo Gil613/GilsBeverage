@@ -14,7 +14,7 @@
 	<a href="home.jsp">홈으로</a>&emsp;&emsp;&emsp;&emsp;&emsp;
 	<a href="noticeList.do">공지</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<a href="cocktailList.do">칵테일</a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-	<a href="community_register.jsp">커뮤니티</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	<a href="communityList.do">커뮤니티</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 	<c:if test="${id != null}">
 		<a href="editUser.do">회원정보수정</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 		<a href="logout.do">${id}님 로그아웃</a>

@@ -61,4 +61,10 @@ public class BoardServiceImpl implements BoardService{
 		return dao.selectCocktail(vo);
 	}
 
+	@Override
+	public List<BoardVO> selectCommunity(BoardVO vo) {
+		
+		return dao.selectCommunity(vo);
+	}
+
 }

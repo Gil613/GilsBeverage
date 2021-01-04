@@ -14,4 +14,5 @@ public interface BoardService {
 	BoardVO selectOneBoard(BoardVO vo);
 	BoardVO selectOneForUpdate(BoardVO vo);
 	List<BoardVO> selectCocktail(BoardVO vo);
+	List<BoardVO> selectCommunity(BoardVO vo);
 }

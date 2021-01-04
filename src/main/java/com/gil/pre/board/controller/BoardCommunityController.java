@@ -64,13 +64,13 @@ public class BoardCommunityController {
 		int idx = s.selectMaxidx();
 		bvo.setIdx(idx);
 		model.addAttribute("c", s.selectOneBoard(bvo));
-		return "home.jsp";
+		return "communityList.do";
 	}
 	
 	//커뮤니티 글 목록보기
 	@RequestMapping(value="/communityList.do")
 	public String selectCommunity(BoardVO vo, Model model) {
-		model.addAttribute("community");
+		model.addAttribute("community",s.selectCommunity(vo));
 		return "community_list.jsp";
 	}
 	

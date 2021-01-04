@@ -15,7 +15,7 @@
 	<div align="center" id=body>
 	<table class="table_0">
 
-	<c:forEach items="${brandy}" var="B">
+	<c:forEach items="${brandy}" var="b">
 	<tr>
 	
 	<th id="th1"><img id="img" src="./product/${b.filename}"/></th>
