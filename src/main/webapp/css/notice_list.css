@@ -1,21 +1,21 @@
 @charset "utf-8";
 
+
 #body{
-	font-family:arial;	
+	font-family:arial;
+	margin-top:60px;	
 }
 
 #title {
-	margin-bottom:30px;
+	margin-bottom:0px;
 }
 
 #t1 {
-	padding-top:60px;
 	font-size:30px;
 }
 
 #t2 {
-	padding-top:60px;
-	padding-right:395px;
+	padding-right:275px;
 	font-size:15px;
 }
 
@@ -24,12 +24,24 @@ table.table_0 {
   border-spacing: 1px;
   text-align: center;
   line-height: 1.5;
-  margin: 20px 10px;
+  margin-bottom:180px;
 }
 
-table.table_0 th{
-  width: 155px;
+
+table.table_0 thead th{
   padding: 10px;
+  text-align:left;
+  font-size:25px;
+  font-weight: bold;
+  vertical-align: top;
+  color: #fff;
+  background: #b8a072 ;
+}
+
+table.table_0 tbody th{
+  width: 50px;
+  padding: 10px;
+  text-align:left;
   font-weight: bold;
   vertical-align: top;
   color: #fff;
@@ -37,7 +49,8 @@ table.table_0 th{
 }
 
 table.table_0 td{
-  width: 155px;
+  width: 300px;
+  text-align:left;
   vertical-align: middle;
   border-bottom: 1px solid #ccc;
   background: #f2f2f2;
@@ -48,33 +61,30 @@ table.table_0 td{
 }
 
 #th_1 {
-	width:300px;
+	width:380px;
 }
 
 #th_2 {
-	width:200px;
+	width:120px;
 }
 
-input[type=button] {
-	margin-top:15px;
-	padding:6px 12px;
-	background-color:rgba(0,0,0,0);
-	border-radius:5px;
-	margin-bottom:15px;
+#th_3 {
+	width:100px;
 }
 
-input[type=button]:hover {
-	background-color:orange;
+input[type=text] {
+	width:245px;
 }
 
 input[type=submit] {
-	margin-top:15px;
+	border:1px solid black;
+	border-radius:5px;
 	padding:6px 12px;
 	background-color:rgba(0,0,0,0);
-	border-radius:5px;
+	color:black;
 	margin-bottom:45px;
 }
 
 input[type=submit]:hover {
 	background-color:orange;
-} 
+}

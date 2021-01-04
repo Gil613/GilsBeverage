@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="./css/cocktail_register.css">
+<link rel="stylesheet" href="./css/cocktail_list.css">
 <meta charset="UTF-8">
 <title>칵테일 게시판</title>
 
@@ -19,14 +19,13 @@
 
 <body>
 	<div align="center" id=body>
-			<table>
+			<table class="table">
 				<tr>
 					<td id="t1">칵테일 게시판</td>
 					<td id="t2">| 이 곳은 칵테일 제조법을 공유하는 공간입니다.</td>
 				</tr>
 			</table>
-		<c:if test="${id eq 'master'}"> <a href="cocktail_register.jsp">글쓰기</a></c:if>
-		
+
 		<table class="table_0">
 			<thead>
 				<tr>
@@ -52,6 +51,10 @@
 			</c:forEach>
 
 		</table>
+
+		<c:if test="${id eq 'master'}">
+			<input type="button" onclick="location.href='cocktail_register.jsp'" value="레시피 등록">
+		</c:if>
 
 	</div>
 </body>
