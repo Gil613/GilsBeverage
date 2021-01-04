@@ -78,10 +78,24 @@ delete gil_board where idx=${idx}
     ]]>
 </select>
 
-<!-- 게시판 검색용 -->
-<select id="selectSearch" resultType="board">
+<!-- 공지 검색 -->
+<select id="selectSearchNotice" resultType="board">
 <![CDATA[
-       select * from gil_board where title like '%'||#{search}||'%' or content like '%'||#{search}||'%'
+       select * from gil_board where (title like '%'||#{search}||'%' or content like '%'||#{search}||'%') and flag ='notice'
+    ]]>
+</select>
+
+<!-- 칵테일 검색 -->
+<select id="selectSearchCocktail" resultType="board">
+<![CDATA[
+       select * from gil_board where (title like '%'||#{search}||'%' or content like '%'||#{search}||'%') and flag ='cocktail'
+    ]]>
+</select>
+
+<!-- 커뮤니티 검색 -->
+<select id="selectSearchCommunity" resultType="board">
+<![CDATA[
+       select * from gil_board where (title like '%'||#{search}||'%' or content like '%'||#{search}||'%') and flag ='community'
     ]]>
 </select>
 

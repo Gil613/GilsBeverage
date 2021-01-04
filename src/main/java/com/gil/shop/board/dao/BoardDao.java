@@ -14,4 +14,7 @@ public interface BoardDao {
 	BoardVO selectOneForUpdate(BoardVO vo);	
 	List<BoardVO> selectCocktail(BoardVO vo);
 	List<BoardVO> selectCommunity(BoardVO vo);
+	List<BoardVO> searchNoticeList(BoardVO vo);
+	List<BoardVO> searchCocktailList(BoardVO vo);
+	List<BoardVO> searchCommunityList(BoardVO vo);
 }

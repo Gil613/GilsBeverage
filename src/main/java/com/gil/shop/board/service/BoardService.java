@@ -2,7 +2,6 @@ package com.gil.shop.board.service;
 
 import java.util.List;
 
-import com.gil.shop.board.dao.BoardDao;
 import com.gil.shop.board.vo.BoardVO;
 
 public interface BoardService {
@@ -15,4 +14,7 @@ public interface BoardService {
 	BoardVO selectOneForUpdate(BoardVO vo);
 	List<BoardVO> selectCocktail(BoardVO vo);
 	List<BoardVO> selectCommunity(BoardVO vo);
+	List<BoardVO> searchNoticeList(BoardVO vo);
+	List<BoardVO> searchCocktailList(BoardVO vo);
+	List<BoardVO> searchCommunityList(BoardVO vo);
 }

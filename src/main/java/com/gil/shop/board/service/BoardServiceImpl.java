@@ -67,4 +67,22 @@ public class BoardServiceImpl implements BoardService{
 		return dao.selectCommunity(vo);
 	}
 
+	@Override
+	public List<BoardVO> searchNoticeList(BoardVO vo) {
+		
+		return dao.searchNoticeList(vo);
+	}
+
+	@Override
+	public List<BoardVO> searchCocktailList(BoardVO vo) {
+
+		return dao.searchCocktailList(vo);
+	}
+
+	@Override
+	public List<BoardVO> searchCommunityList(BoardVO vo) {
+		
+		return dao.searchCommunityList(vo);
+	}
+
 }
