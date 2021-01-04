@@ -59,6 +59,7 @@ public class BoardCommunityController {
 			}else{
 				bvo.setFilename("space.jpg");
 			}
+		uvo.setId((String)session.getAttribute("id"));
 		s.boardInsert(bvo);
 		int idx = s.selectMaxidx();
 		bvo.setIdx(idx);
