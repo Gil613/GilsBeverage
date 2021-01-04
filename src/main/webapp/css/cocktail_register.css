@@ -9,10 +9,12 @@
 }
 
 #t1 {
+	padding-top:60px;
 	font-size:30px;
 }
 
 #t2 {
+	padding-top:60px;
 	padding-right:275px;
 	font-size:15px;
 }
@@ -20,6 +22,8 @@
 table.table_0 {
   border-collapse: separate;
   border-spacing: 1px;
+  width:600px;
+  height:400px;
   text-align: center;
   line-height: 1.5;
   margin-top: 60px;
