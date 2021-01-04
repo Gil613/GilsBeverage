@@ -14,9 +14,9 @@
 	a:visited { color:black }
 </style> 
 
-	<div>
+	<div align="center">
 		<form action="searchList.do">
-<input  type="text"  name="search"> 
+<input  type="text"  name="search" placeholder="검색"> 
 <input  type="submit"  value="검색하기" >
 </form>
 	</div>
