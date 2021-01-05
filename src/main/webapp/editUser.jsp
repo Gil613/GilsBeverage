@@ -25,11 +25,24 @@
 <script>
 	function functionK(){
 	    if (f1.pwd.value.length < 4) {
-	       swal("비밀번호가 너무 짧아요! ", "비밀번호는 4자이상 입력해주세요", "error");
+	       swal("비밀번호가 너무 짧아요! ", "비밀번호는 4자이상 입력해주세요.", "error");
 	       f1.pwd.value="";
 	       f1.pwd.focus(); 
 	       return  false ;
 	    }
+	    if (f1.email.value == "") {
+	       swal("이메일을 입력해주세요! ", "안내받을 이메일을 입력해주세요.", "error");
+	       f1.email.value="";
+	       f1.email.focus(); 
+	       return  false ;
+	    }
+	    if (f1.phone.value == "") {
+	       swal("전화번호를 입력해주세요! ", "전화번호를 입력해야합니다.", "error");
+	       f1.phone.value="";
+	       f1.phone.focus(); 
+	       return  false ;
+	    }
+	    
 	 }
 </script>
 <body>
