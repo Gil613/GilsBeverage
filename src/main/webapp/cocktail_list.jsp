@@ -40,21 +40,21 @@
 					<td>${c.idx}</td>
 					<td><c:if test="${c.filename ne 'space.jpg'}"><img id="img" src="./cocktail/${c.filename}"/></c:if></td>
 					<td><a href="cocktail_content.do?idx=${c.idx}">${c.title}</a></td>
-					<td>${c.regdate}</td>
+					<td>${c.regdate}
 			<c:if test="${id eq 'master'}">		
-					<th><input type="button"
+					&nbsp;<input type="button"
 						onclick="location.href='deleteCocktail.do?idx=${c.idx}'"
-						value="삭제"></th>
+						value="삭제"></td>
 			</c:if>
 				</tr>
 			</c:forEach>
 
 		</table>
-
-		<c:if test="${id eq 'master'}">
-			<input type="button" onclick="location.href='cocktail_register.jsp'" value="레시피 등록">
-		</c:if>
-
+		<div id="button_spot">
+			<c:if test="${id eq 'master'}">
+				<input type="button" onclick="location.href='cocktail_register.jsp'" value="레시피 등록">
+			</c:if>
+		</div>
 	</div>
 </body>
 </html>

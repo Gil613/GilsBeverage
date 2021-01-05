@@ -38,18 +38,19 @@
 			</tr>
 		</thead>
 		
+		<tbody>
 		<c:forEach var="n" items="${notice}">
 			<tr>
 				<td>${n.idx}</td>
 				<td><a href="notice_content.do?idx=${n.idx}">${n.title}</a></td>
 				<td>${n.regdate}
 				<c:if test="${id eq 'master'}">
-					&emsp;<input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제">
+					&nbsp;<input type="button" onclick="location.href='deleteNotice.do?idx=${n.idx}'" value="삭제">
 				</c:if>
 				</td>
 			</tr>
 		</c:forEach>
-		
+		</tbody>
 	</table>
 	
 	<form action="notice_register.jsp">

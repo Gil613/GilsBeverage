@@ -74,3 +74,15 @@ table.table_0 td{
 	font-family:arial;
 	font-size:20px;
 }
+
+input[type=submit] {
+	border:1px solid black;
+	border-radius:5px;
+	padding:3px 6px;
+	background-color:rgba(0,0,0,0);
+	color:black;
+}
+
+input[type=submit]:hover {
+	background-color:orange;
+}

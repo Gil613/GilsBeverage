@@ -15,8 +15,28 @@
 }
 
 #t2 {
-	padding-right:275px;
+	padding-right:395px;
 	font-size:15px;
+}
+
+#th1 {
+	width:100px;
+}
+
+#th2 {
+	width:150px;
+}
+
+#th3 {
+	width:100px;
+}
+
+#th4 {
+	width:300px;
+}
+
+#th5 {
+	width:150px;
 }
 
 table.table_0 {
@@ -24,7 +44,7 @@ table.table_0 {
   border-spacing: 1px;
   text-align: center;
   line-height: 1.5;
-  margin-bottom:180px;
+  margin-bottom:40px;
 }
 
 
@@ -47,18 +67,6 @@ table.table_0 tbody td{
   padding-bottom:8px;
 }
 
-#th_0 {
-	width:100px;
-}
-
-#th_1 {
-	width:420px;
-}
-
-#th_2 {
-	width:100px;
-}
-
 input[type=submit] {
 	border:1px solid black;
 	border-radius:5px;
@@ -75,7 +83,7 @@ input[type=submit]:hover {
 input[type=button] {
 	border:1px solid black;
 	border-radius:5px;
-	padding:6px 12px;
+	padding:3px 6px;
 	background-color:rgba(0,0,0,0);
 	color:black;
 }

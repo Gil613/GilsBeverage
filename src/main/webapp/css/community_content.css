@@ -1,9 +1,7 @@
 @charset "utf-8";
 
-
 #body{
-	font-family:arial;
-	margin-top:60px;	
+	font-family:arial;	
 }
 
 #title {
@@ -24,12 +22,14 @@ table.table_0 {
   border-spacing: 1px;
   text-align: center;
   line-height: 1.5;
-  margin-bottom:180px;
+  margin-top: 60px;
+  margin-bottom:15px;
 }
 
 
 table.table_0 thead th{
   padding: 10px;
+  width:300px;
   text-align:center;
   font-size:25px;
   font-weight: bold;
@@ -38,13 +38,22 @@ table.table_0 thead th{
   background: #b8a072 ;
 }
 
-table.table_0 tbody td{
+table.table_0 tbody th{
+  width: 50px;
+  padding: 10px;
+  text-align:center;
+  font-weight: bold;
+  vertical-align: top;
+  color: black;
+  background: #e6e6e6 ;
+}
+
+table.table_0 td{
+  width: 300px;
   text-align:center;
   vertical-align: middle;
   border-bottom: 1px solid #ccc;
   background: #f2f2f2;
-  padding-top:8px;
-  padding-bottom:8px;
 }
 
 #th_0 {
@@ -52,24 +61,19 @@ table.table_0 tbody td{
 }
 
 #th_1 {
-	width:420px;
-}
-
-#th_2 {
 	width:100px;
 }
 
-input[type=submit] {
-	border:1px solid black;
-	border-radius:5px;
-	padding:6px 12px;
-	background-color:rgba(0,0,0,0);
-	color:black;
-	margin-bottom:45px;
+#th_2 {
+	width:300px;
 }
 
-input[type=submit]:hover {
-	background-color:orange;
+#th_3 {
+	width:200px;
+}
+
+input[type=text] {
+	width:245px;
 }
 
 input[type=button] {
@@ -78,6 +82,7 @@ input[type=button] {
 	padding:6px 12px;
 	background-color:rgba(0,0,0,0);
 	color:black;
+	margin-bottom:45px;
 }
 
 input[type=button]:hover {
