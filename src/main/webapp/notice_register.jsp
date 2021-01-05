@@ -10,7 +10,24 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+	function functionK() {
+		if (f1.title.value == "") {
+			swal("글 제목을 입력해주세요!", "error");
+			f1.title.value = "";
+			f1.title.focus();
+			return false;
+		}
 
+		if (f1.content.value == "") {
+			swal("글 내용을 입력해주세요!", "error");
+			f1.content.value = "";
+			f1.content.focus();
+			return false;
+		}
+	}
+</script>
 <body>
 
 	<div align="center" id="body">

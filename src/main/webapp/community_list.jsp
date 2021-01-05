@@ -36,7 +36,7 @@
 					<tr>
 						<td>${c.idx}</td>
 						<td>${c.id}</td>
-						<td><img id="img" src="./cocktail/${c.filename}"/></td>
+						<td><c:if test="${c.filename ne 'space.jpg'}"><img id="img" src="./cocktail/${c.filename}"/></c:if></td>
 						<td><a href="community_content.do?idx=${c.idx}">${c.title}</a></td>
 						<td>${c.regdate}
 							&nbsp;<c:if test="${c.id eq id || id eq 'master'}">

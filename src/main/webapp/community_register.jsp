@@ -46,7 +46,7 @@
 				</thead>
 				<tr>
 					<th scope="cols">사진</th>
-					<td><input type="file" name="uploadFile"></td>
+					<td><input type="file" name="uploadFile" id="pupFile"></td>
 				</tr>
 
 				<tr>
