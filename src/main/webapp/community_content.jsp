@@ -28,7 +28,7 @@
 	</tr>
 	<tr>
 	<th scope="row">
-		<c:if test="${c.filename ne null}">
+		<c:if test="${c.filename ne 'space.jpg'}">
 			<img id="img_edit" src="./cocktail/${c.filename}" />
 		</c:if>
 		<br>${c.content}

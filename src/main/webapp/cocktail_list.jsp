@@ -44,8 +44,7 @@
 			<c:if test="${id eq 'master'}">		
 					&nbsp;<input type="button"
 						onclick="location.href='deleteCocktail.do?idx=${c.idx}'"
-						value="삭제"></td>
-			</c:if>
+						value="삭제"></c:if></td>
 				</tr>
 			</c:forEach>
 

@@ -38,7 +38,7 @@
 	<c:if test="${id eq 'master'}">
 		<input type="button" onClick="location.href='modifyCocktail.do?idx=${c.idx}'" value="수정하기">
 	</c:if>
-	<input type="button" onClick="location.href='cocktailList.do?idx=${c.idx}'" value="목록보기">
+	<input type="button" onClick="location.href='cocktailList.do'" value="목록보기">
 	</div>
 </body>
 </html>

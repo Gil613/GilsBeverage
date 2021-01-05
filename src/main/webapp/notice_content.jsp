@@ -10,7 +10,11 @@
 <link rel="stylesheet" href="./css/notice_content.css">
 <title>Insert title here</title>
 </head>
-
+<style type="text/css"> 
+	a { text-decoration:none } 
+	a:link { color:black }
+	a:visited { color:black }
+</style> 
 <body>
 
 	<div align="center" id=body>
@@ -41,7 +45,10 @@
 	<c:if test="${id eq 'master'}">
 		<input type="button" onClick="location.href='modifyNotice.do?idx=${nb.idx}'" value="수정하기">
 	</c:if>
+		<input type="button" onClick="location.href='noticeList.do'" value="목록보기">
 	</div>
+	
+
 </body>
 </html>
 
