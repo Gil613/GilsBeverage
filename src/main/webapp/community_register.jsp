@@ -24,7 +24,7 @@
 	}
 </script>
 <head>
-<link rel="stylesheet" href="./css/notice_register.css">
+<link rel="stylesheet" href="./css/community_register.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -32,8 +32,6 @@
 <body>
 
 	<div align="center" id="body">
-		<div id="title">칵테일 등록</div>
-		<br>
 		<form action="insertCommunity.do" method="post"
 			enctype="multipart/form-data" name="f1"
 			onSubmit="return functionK();">
@@ -41,26 +39,27 @@
 				type="hidden" name="id" id="id" value="${sessionScope.id}">
 
 			<table class="table_0">
+				<thead>
+					<tr>
+						<th colspan="2">글 등록</th>
+					</tr>
+				</thead>
 				<tr>
-					<td id="table_text_0">사진</td>
+					<th scope="cols">사진</th>
 					<td><input type="file" name="uploadFile"></td>
 				</tr>
 
 				<tr>
-					<td id="table_text_1">제목</td>
+					<th scope="cols">제목</th>
 					<td><input type="text" name="title"></td>
 				</tr>
 
 				<tr>
-					<td id="table_text_2">내용</td>
+					<th scope="cols">내용</th>
 					<td><textarea name="content" cols=40 rows=10></textarea></td>
 				</tr>
-
-				<tr>
-					<td align="center" colspan="2"><input type="submit"
-						value="글 등록"></td>
-				</tr>
 			</table>
+			<input type="submit" value="글 등록">
 		</form>
 	</div>
 </body>

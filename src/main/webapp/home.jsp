@@ -15,7 +15,7 @@
 </style> 
 
 	<div align="center">
-		<form action="searchList.do">
+		<form action="searchList.do"><br>
 <input  type="text"  name="search" placeholder="검색"> 
 <input  type="submit"  value="검색하기" >
 </form>

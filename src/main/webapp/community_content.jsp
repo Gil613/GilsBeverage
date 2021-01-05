@@ -1,28 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="stylesheet" href="./css/stylesheet.css">
 <c:import url="top.jsp" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/community_content.css">
 <title>Insert title here</title>
 </head>
 
 <body>
 	<div align="center" id=body>
-	<h2>커뮤니티 글 보기</h2><br>
-	<table>
-	<tr><th>${c.title}<hr></th></tr>
-	<tr><th><c:if test="${c.filename ne null}"><img id="img_edit" src="./cocktail/${c.filename}" /></c:if>
-	<br>
-	${c.content}</th></tr>
+	<table class="table_0">
+	
+	<thead>
+		<tr>
+			<th>커뮤니티 글 보기</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+	<tr>
+		<th scope="row">
+			${c.title}
+		</th>
+	</tr>
+	<tr>
+	<th scope="row">
+		<c:if test="${c.filename ne null}">
+			<img id="img_edit" src="./cocktail/${c.filename}" />
+		</c:if>
+		<br>${c.content}
+	</th>
+	</tr>
+	</tbody>
 	</table>
+	
 	<c:if test="${c.id eq id}">
-		<a href="modifyCommunity.do?idx=${c.idx}">수정하기</a>
+		<input type="button" onClick="location.href='modifyCommunity.do?idx=${c.idx}'" value="수정하기">
 	</c:if>
-	<a href="communityList.do">목록보기</a>
+		<input type="button" onClick="location.href='communityList.do'" value="목록보기">
+	
 	</div>
 </body>
 </html>
