@@ -20,7 +20,7 @@
 	<tr>
 	
 	<th id="th1"><img id="img" src="./product/${g.filename}"/></th>
-	<th id="th2"><a href="conteng.do?idx=${g.idx}">${g.pname}</a></th>
+	<th id="th2"><a href="content.do?idx=${g.idx}">${g.pname}</a></th>
 	<th id="th3">${g.capacity}</th>
 	<th id="th4">${g.cost}</th>
 	<c:if test="${id eq 'master'}">
