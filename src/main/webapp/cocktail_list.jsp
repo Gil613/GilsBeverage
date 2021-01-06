@@ -38,7 +38,7 @@
 			<c:forEach var="c" items="${cocktail}">
 				<tr>
 					<td>${c.idx}</td>
-					<td><c:if test="${c.filename ne 'space.jpg'}"><img id="img" src="./cocktail/${c.filename}"/></c:if></td>
+					<td><c:if test="${c.filename ne 'space.jpg'}"><img id="img_edit" src="./cocktail/${c.filename}"/></c:if></td>
 					<td><a href="cocktail_content.do?idx=${c.idx}">${c.title}</a></td>
 					<td>${c.regdate}
 			<c:if test="${id eq 'master'}">		

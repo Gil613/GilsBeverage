@@ -17,6 +17,11 @@
 	font-size:15px;
 }
 
+#img_edit {
+	width:80px;
+	height:50px;
+}
+
 table.table_0 {
   border-collapse: separate;
   border-spacing: 1px;
