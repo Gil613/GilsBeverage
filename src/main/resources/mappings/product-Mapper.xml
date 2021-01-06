@@ -6,8 +6,8 @@
 <!-- 상품 등록 -->
 <insert id="pinsert">
 <![CDATA[
-	insert into gil_product(idx, filename, ptype, pname, pcontent,  capacity, cost, pcode)
-	values(PRODUCT_IDX_SEQUENCE.nextval, #{filename},#{ptype},#{pname},#{pcontent},#{capacity},#{cost}, #{pcode})	
+	insert into gil_product(idx, filename, ptype, pname, pcontent,  capacity, cost)
+	values(PRODUCT_IDX_SEQUENCE.nextval, #{filename},#{ptype},#{pname},#{pcontent},#{capacity},#{cost})	
 	]]>
 </insert>
 
