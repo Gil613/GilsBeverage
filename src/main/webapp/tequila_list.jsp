@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <c:import url="top.jsp" />
 <!DOCTYPE html>
@@ -21,8 +22,8 @@
 	
 	<th id="th1"><img id="img" src="./product/${t.filename}"/></th>
 	<th id="th2"><a href="content.do?idx=${t.idx}">${t.pname}</a></th>
-	<th id="th3">${t.capacity}</th>
-	<th id="th4">${t.cost}</th>
+	<th id="th3">${t.capacity}ml</th>
+	<th id="th4"><fmt:formatNumber type="number" value="${t.cost}" pattern="###,###,###" />원</th>
 	<c:if test="${id eq 'master'}">
 	<th><input type="button" onclick="location.href='delete.do?idx=${t.idx}'" value="삭제"></th>
 	</c:if>	
