@@ -18,4 +18,5 @@ public interface ProductDao {
 	ProductVO selectOne(ProductVO vo);
 	ProductVO selectForUpdate(ProductVO vo);
 	List<ProductVO> searchProductList(ProductVO vo);
+	List<ProductVO> selectPtype(ProductVO vo);
 }

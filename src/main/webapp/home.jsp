@@ -24,7 +24,7 @@
 		<table class="table_0">
 			<tr>
 				<td id="td_1"><a href="vodka.do">Vodka</a></td>
-				<td><a href="whisky.do">Whisky</a></td>
+				<td><a href="whisky.do?ptype=whisky">Whisky</a></td>
 				<td><a href="brandy.do">Brandy</a></td>
 			</tr>
 

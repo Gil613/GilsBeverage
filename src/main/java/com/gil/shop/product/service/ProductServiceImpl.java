@@ -85,4 +85,10 @@ public class ProductServiceImpl implements ProductService{
 		return dao.searchProductList(vo);
 	}
 
+	@Override
+	public List<ProductVO> selectPtype(ProductVO vo) {
+		return dao.selectPtype(vo);
+	}
+
+
 }

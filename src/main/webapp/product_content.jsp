@@ -14,8 +14,7 @@
 	<div id="outline" align="center">
 		<br>
 			<table class="table_0">
-				<tr
-				>
+				<tr>
 					<th id="img_bgc" rowspan=4><img id="img_edit" src="./product/${p.filename}" /></th>
 					<th id="text_0">${p.pname}</th>
 				</tr>
@@ -35,6 +34,7 @@
 			<c:if test="${id != null}">
 			<a href="scrap.do?pname=${p.pname}"><input type="button" value="스크랩하기"></a>
 			</c:if>
+			<input type="button" onClick="location.href='cocktailList.do'" value="목록보기">
 	</div>
 </body>
 </html>

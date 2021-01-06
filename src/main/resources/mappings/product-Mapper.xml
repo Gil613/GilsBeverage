@@ -96,4 +96,12 @@ select filename from gil_product where idx=#{idx}
     ]]>
 </select>
 
+<!-- ptype받아오기 -->
+<select id="selectPtype" resultType="product">
+	<![CDATA[
+	select idx,filename,pname,capacity,cost 
+	from gil_product where ptype=${ptype}
+ 	]]>
+</select>
+
 </mapper>

@@ -84,4 +84,10 @@ public class ProductDaoImpl implements ProductDao{
 		return sst.selectList("ProductDAO.selectSearchProduct", vo);
 	}
 
+	@Override
+	public List<ProductVO> selectPtype(ProductVO vo) {
+		// TODO Auto-generated method stub
+		return sst.selectList("ProductDAO.selectPtype", vo);
+	}
+
 }

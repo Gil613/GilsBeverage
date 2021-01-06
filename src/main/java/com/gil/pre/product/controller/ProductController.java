@@ -123,37 +123,38 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value="/whisky.do")
-	public String whisky(ProductVO pvo, UserVO uvo, Model model) {
-		model.addAttribute("whisky", s.whisky(pvo));
+	public String whisky(ProductVO pvo, Model model) {
+		
+		model.addAttribute("whisky", s.selectPtype(pvo));
 		return "whisky_list.jsp";
 	}
 	
 	@RequestMapping(value="/vodka.do")
-	public String vodka(ProductVO pvo, UserVO uvo, Model model) {
+	public String vodka(ProductVO pvo,Model model) {
 		model.addAttribute("vodka", s.vodka(pvo));
 		return "vodka_list.jsp";
 	}
 	
 	@RequestMapping(value="/brandy.do")
-	public String brandy(ProductVO pvo, UserVO uvo, Model model) {
+	public String brandy(ProductVO pvo,  Model model) {
 		model.addAttribute("brandy", s.brandy(pvo));
 		return "brandy_list.jsp";
 	}
 	
 	@RequestMapping(value="/tequila.do")
-	public String tequila(ProductVO pvo, UserVO uvo, Model model) {
+	public String tequila(ProductVO pvo, Model model) {
 		model.addAttribute("tequila", s.tequila(pvo));
 		return "tequila_list.jsp";
 	}
 	
 	@RequestMapping(value="/gin.do")
-	public String gin(ProductVO pvo, UserVO uvo, Model model) {
+	public String gin(ProductVO pvo,Model model) {
 		model.addAttribute("gin", s.gin(pvo));
 		return "gin_list.jsp";
 	}
 	
 	@RequestMapping(value="/lw.do")
-	public String lw(ProductVO pvo, UserVO uvo, Model model) {
+	public String lw(ProductVO pvo, Model model) {
 		model.addAttribute("lw", s.lw(pvo));
 		return "lw_list.jsp";
 	}
