@@ -10,6 +10,11 @@
 	margin-bottom:0px;
 }
 
+#img_edit {
+	width:80px;
+	height:50px;
+}
+
 #t1 {
 	font-size:30px;
 }
@@ -37,6 +42,11 @@
 
 #th5 {
 	width:150px;
+}
+
+#img_edit {
+	width:80px;
+	height:50px;
 }
 
 table.table_0 {

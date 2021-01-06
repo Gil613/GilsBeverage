@@ -51,8 +51,7 @@
 				<tr>
 					<td>${c.idx}</td>
 					<td><c:if test="${c.filename ne 'space.jpg'}">
-							<img id="img" src="./cocktail/${c.filename}" width="50"
-								height="50" />
+							<img id="img" src="./cocktail/${c.filename}" />
 						</c:if></td>
 					<td><a href="cocktail_content.do?idx=${c.idx}">${c.title}</a></td>
 					<td>${c.regdate}
