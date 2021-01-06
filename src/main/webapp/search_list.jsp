@@ -81,8 +81,11 @@
 				<tr>
 					<td>${c.idx}</td>
 					<td>${c.id}</td>
-					<td><img id="img" src="./community/${c.filename}" width="50"
-						height="50" /></td>
+					<td>
+					<c:if test="${c.filename ne 'space.jpg'}">
+					<img id="img" src="./community/${c.filename}" width="50"
+						height="50" />
+						</c:if></td>
 					<td><a href="community_content.do?idx=${c.idx}">${c.title}</a></td>
 					<td>${c.regdate}
 					<c:if test="${c.id eq id || id eq 'master'}">

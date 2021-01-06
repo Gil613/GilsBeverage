@@ -34,7 +34,7 @@
 			<c:if test="${id != null}">
 			<a href="scrap.do?pname=${p.pname}"><input type="button" value="스크랩하기"></a>
 			</c:if>
-			<input type="button" onClick="location.href='cocktailList.do'" value="목록보기">
+			<input type="button" onClick="location.href='tequila.do'" value="목록보기">
 	</div>
 </body>
 </html>
