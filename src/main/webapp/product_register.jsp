@@ -10,11 +10,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-
 <body>
 
 	<div align="center" id="body">
-		<form action="insert.do" method="post" enctype="multipart/form-data">
+		<form action="insert.do" method="post" enctype="multipart/form-data" name="f1" onSubmit="return functionK();">
 		<br><br>
 		<table class="table_0">
 			

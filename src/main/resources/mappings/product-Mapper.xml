@@ -6,8 +6,8 @@
 <!-- 상품 등록 -->
 <insert id="pinsert">
 <![CDATA[
-	insert into gil_product(idx, filename, ptype, pname, pcontent,  capacity, cost)
-	values(PRODUCT_IDX_SEQUENCE.nextval, #{filename},#{ptype},#{pname},#{pcontent},#{capacity},#{cost})	
+	insert into gil_product(idx, filename, ptype, pname, pcontent,  capacity, cost, pcode)
+	values(PRODUCT_IDX_SEQUENCE.nextval, #{filename},#{ptype},#{pname},#{pcontent},#{capacity},#{cost}, #{pcode})	
 	]]>
 </insert>
 
@@ -94,14 +94,6 @@ select filename from gil_product where idx=#{idx}
 <![CDATA[
        select * from gil_product where pname like '%'||#{search}||'%' or ptype like '%'||#{search}||'%'
     ]]>
-</select>
-
-<!-- ptype받아오기 -->
-<select id="selectPtype" resultType="product">
-	<![CDATA[
-	select idx,filename,pname,capacity,cost 
-	from gil_product where ptype=${ptype}
- 	]]>
 </select>
 
 </mapper>

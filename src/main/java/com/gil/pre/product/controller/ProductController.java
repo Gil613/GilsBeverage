@@ -125,7 +125,7 @@ public class ProductController {
 	@RequestMapping(value="/whisky.do")
 	public String whisky(ProductVO pvo, Model model) {
 		
-		model.addAttribute("whisky", s.selectPtype(pvo));
+		model.addAttribute("whisky", s.whisky(pvo));
 		return "whisky_list.jsp";
 	}
 	

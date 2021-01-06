@@ -11,9 +11,17 @@ public class ProductVO {
 	private String ptype;
 	private String capacity;
 	private String cost;
+	private String pcode;
 	private String search;
 	
+
 	
+	public String getPcode() {
+		return pcode;
+	}
+	public void setPcode(String pcode) {
+		this.pcode = pcode;
+	}
 	public String getSearch() {
 		return search;
 	}
@@ -72,7 +80,7 @@ public class ProductVO {
 	public String toString() {
 		return "ProductVO [uploadFile=" + uploadFile + ", idx=" + idx + ", filename=" + filename + ", pname=" + pname
 				+ ", pcontent=" + pcontent + ", ptype=" + ptype + ", capacity=" + capacity + ", cost=" + cost
-				+ ", search=" + search + "]";
+				+ ", pcode=" + pcode + ", search=" + search + "]";
 	}
 	
 	
