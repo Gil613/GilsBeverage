@@ -1,5 +1,7 @@
 # GilsBeverage
 
+Home.jsp가 메인페이지입니다.
+
 ~~~sql
 CREATE TABLE GIL_PRODUCT(
     IDX NUMBER NOT NULL PRIMARY KEY,
