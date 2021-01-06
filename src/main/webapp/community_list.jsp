@@ -36,11 +36,22 @@
 					<tr>
 						<td>${c.idx}</td>
 						<td>${c.id}</td>
-						<td><c:if test="${c.filename ne 'space.jpg'}"><img id="img_edit" src="./cocktail/${c.filename}"/></c:if></td>
-						<td><a href="community_content.do?idx=${c.idx}">${c.title}</a></td>
-						<td>${c.regdate}
-							&nbsp;<c:if test="${c.id eq id || id eq 'master'}">
-									<input type="button" onclick="location.href='deleteCommunity.do?idx=${c.idx}'" value="삭제">
+						<td>
+						<!-- 이미지 파일이 없으면 파일이름이 space.jpg로 저장되어 사진이 안보인다. -->
+							<c:if test="${c.filename ne 'space.jpg'}">
+								<img id="img_edit" src="./community/${c.filename}"/>
+							</c:if>
+						</td>
+						<td>
+							<a href="community_content.do?idx=${c.idx}">
+								${c.title}
+							</a>
+						</td>
+						<td>
+							${c.regdate}&nbsp;
+						<!-- 게시글의 삭제는 관리자 아이디(master)와 작성자 본인만 삭제 가능 하다. -->
+							<c:if test="${c.id eq id || id eq 'master'}">
+								<input type="button" onclick="location.href='deleteCommunity.do?idx=${c.idx}'" value="삭제">
 							</c:if>
 						</td>
 					</tr>

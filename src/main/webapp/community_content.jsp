@@ -29,17 +29,18 @@
 	<tr>
 	<th scope="row">
 		<c:if test="${c.filename ne 'space.jpg'}">
-			<img id="img_edit" src="./cocktail/${c.filename}" />
+			<img id="img_edit" src="./community/${c.filename}" />
 		</c:if>
 		<br>${c.content}
 	</th>
 	</tr>
 	</tbody>
 	</table>
-	
+	<!-- 게시글 작성자만 수정가능 -->
 	<c:if test="${c.id eq id}">
 		<input type="button" onClick="location.href='modifyCommunity.do?idx=${c.idx}'" value="수정하기">
 	</c:if>
+	
 		<input type="button" onClick="location.href='communityList.do'" value="목록보기">
 	
 	</div>
